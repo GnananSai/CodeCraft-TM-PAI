@@ -6,6 +6,8 @@ Blue- '2580D5'
 
 Light Grey - 'EAEAEA'
 
+White Grey - 'F5F5F5'
+
 Orange - 'FFAB2D'
 
 Dark Grey - '555555'
