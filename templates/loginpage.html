@@ -119,7 +119,6 @@
           </div>
         </nav>
       </section>
-
       <!-- Login/Register -->
       <section class="pages row justify-content-center">
         <!--Login-->
@@ -130,6 +129,18 @@
             <div class="card-title">
               <h1 class="m-4 mb-1">Login</h1>
             </div>
+
+            <!-- Alert -->
+            {% if msg %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>{{msg}}!!!</strong> Check the credentials
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            {% endif %}
+
+
             <div class="card-body text-start py-4 text-black">
               <form action="/login" method="post" id="form">
                 <div class="input-group mb-4">
