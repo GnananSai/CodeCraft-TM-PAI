@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template, request, flash, redirect, url_for, get_flashed_messages
 from database import load_login_info, get_pass, register
 
 app = Flask(__name__)
@@ -19,12 +19,15 @@ def login():
   username = data['username']
   password = data['password']
   real = get_pass(username)
-  if (password == real):
+  if(real==None):
+    error = "User Not found"
+  elif (password == real):
     print("passwords match")
     return render_template('success.html')
   else:
     print("passwords dont match")
-    return render_template('fail.html')
+    error = "Incorrect Password"
+  return render_template('loginpage.html', msg=error)
 
 @app.route("/register", methods=['post'])
 def register_page():
