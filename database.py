@@ -26,7 +26,11 @@ def get_pass(user):
     dumb = []
     for row in result:
       dumb.append(row._mapping)
-    return (dumb[0].get('pw'))
+    try:
+      return (dumb[0].get('pw'))
+    except:
+      return None
+
 
 def register(user, pw, email):
   with engine.connect() as conn:
