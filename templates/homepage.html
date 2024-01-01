@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Reign</title>
+    <title>Home</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -31,7 +31,7 @@
         width: 1660px;
       }
 
-      @static only screen and (max-width: 600px) {
+      @media only screen and (max-width: 600px) {
         .navbar-custom {
           height: auto;
         }
@@ -51,12 +51,18 @@
         #stats {
           width: 100%;
         }
+
+        .nav-name {
+          position: absolute;
+          margin-left: 3rem;
+        }
       }
       .icons {
         font-size: 30px;
       }
     </style>
   </head>
+
   <body class="bg-black">
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -124,12 +130,98 @@
                   </form>
                 </li>
 
-                <li class="nav-item mx-md-5 mb-2 mb-md-0">
-                  <a
-                    class="btn btn-outline-primary text-light"
-                    href="/loginpage"
-                    >Login/Register</a
-                  >
+                <li class="nav-item mx-md-2 mb-2 mb-md-0 d-flex">
+                  <div class="profile nav-item d-md-none d-block">
+                    <div class="dropdown">
+                      <img
+                        src="../static/person.png"
+                        class="dropdown-toggle rounded-circle"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="width: 35px; height: 35px"
+                      />
+
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Dashboard
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            My Courses
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Chat Bot
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Community
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            TO-DO List
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Focus Session
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a class="nav-link nav-name" href="#">Gnana Sai</a>
+                </li>
+
+                <li class="nav-item mx-md-2 mb-2 mb-md-0 d-md-block d-none">
+                  <div class="btn-group">
+                    <img
+                      src="../static/person.png"
+                      class="dropdown-toggle rounded-circle"
+                      data-bs-toggle="dropdown"
+                      data-bs-display="static"
+                      aria-expanded="false"
+                      style="width: 35px; height: 35px"
+                    />
+
+                    <ul class="dropdown-menu dropdown-menu-md-end">
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Dashboard
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          My Courses
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Chat Bot
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Community
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          TO-DO List
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Focus Session
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -156,6 +248,242 @@
           id="heroimg"
           style="width: 450px; height: 600px"
         />
+      </section>
+
+      <br />
+
+      <!-- Current Courses -->
+      <section class="container-fluid" id="courses">
+        <div class="row text-light my-5 mx-0">
+          <div class="col-1"></div>
+          <div class="col-auto">
+            <h2 class="text-primary">Welcome Back Gnana Sai !</h2>
+            <h6>Pick up right where you left</h6>
+          </div>
+        </div>
+
+        <div class="row justify-content-evenly mb-5">
+          <div
+            class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
+            style="width: 26rem"
+          >
+            <div class="cardbtn btn btn-light position-absolute m-3">
+              Art & Design
+            </div>
+            <img
+              src="../static/art.png"
+              class="card-img-top rounded-top-4"
+              alt="art"
+            />
+            <div class="card-body">
+              <h6 class="text-start">by Sai</h6>
+              <h3>Fine Arts and Modern Design Course</h3>
+              <div class="cardbase d-flex justify-content-center">
+                <div class="clock mx-2">
+                  <i class="bi bi-clock-fill"></i>
+                  <span>2 Weeks</span>
+                </div>
+                <div class="students mx-2">
+                  <i class="bi bi-people-fill"></i>
+                  <span>156 Students</span>
+                </div>
+              </div>
+              <hr class="text-warning" />
+              <p>
+                <s class="me-2">$29.99</s>
+                <span class="text-success fw-bolder me-3">Free</span>
+                <span class="text-end"><u>View More</u></span>
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
+            style="width: 26rem"
+          >
+            <div class="cardbtn btn btn-light position-absolute m-3">
+              Development
+            </div>
+            <img
+              src="../static/dev.png"
+              class="card-img-top rounded-top-4"
+              alt="art"
+            />
+            <div class="card-body">
+              <h6 class="text-start">by Sai</h6>
+              <h3>Full-Stack Web Development Course</h3>
+              <div class="cardbase d-flex justify-content-center">
+                <div class="clock mx-2">
+                  <i class="bi bi-clock-fill"></i>
+                  <span>4 Weeks</span>
+                </div>
+                <div class="students mx-2">
+                  <i class="bi bi-people-fill"></i>
+                  <span>500 Students</span>
+                </div>
+              </div>
+              <hr class="text-warning" />
+              <p>
+                <s class="me-2">$49.99</s>
+                <span class="text-success fw-bolder me-2">$39.99</span>
+                <span class="text-end"><u>View More</u></span>
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
+            style="width: 26rem"
+          >
+            <div class="cardbtn btn btn-light position-absolute m-3">
+              Photography
+            </div>
+            <img
+              src="../static/photoguy.jpg"
+              class="card-img-top rounded-top-4"
+              alt="photo"
+            />
+            <div class="card-body">
+              <h6 class="text-start">by Sai</h6>
+              <h3>Pro Photography Course - For Beginners</h3>
+
+              <div class="cardbase d-flex justify-content-center">
+                <div class="clock mx-2">
+                  <i class="bi bi-clock-fill"></i>
+                  <span>2 Weeks</span>
+                </div>
+                <div class="students mx-2">
+                  <i class="bi bi-people-fill"></i>
+                  <span>89 Students</span>
+                </div>
+              </div>
+              <hr class="text-warning" />
+              <p>
+                <s class="me-2">$39.99</s>
+                <span class="text-success fw-bolder me-3">Free</span>
+                <span class="text-end"><u>View More</u></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br />
+
+      <!-- Suggested Courses -->
+      <section class="container-fluid" id="courses">
+        <div class="row text-light my-5 mx-0">
+          <div class="col-1"></div>
+          <div class="col-auto">
+            <h2>Courses Similar To Photography</h2>
+            <h6>Because you watched courses on Photography</h6>
+          </div>
+        </div>
+
+        <div class="row justify-content-evenly mb-5">
+          <div
+            class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
+            style="width: 26rem"
+          >
+            <div class="cardbtn btn btn-light position-absolute m-3">
+              Art & Design
+            </div>
+            <img
+              src="../static/art.png"
+              class="card-img-top rounded-top-4"
+              alt="art"
+            />
+            <div class="card-body">
+              <h6 class="text-start">by Sai</h6>
+              <h3>Fine Arts and Modern Design Course</h3>
+              <div class="cardbase d-flex justify-content-center">
+                <div class="clock mx-2">
+                  <i class="bi bi-clock-fill"></i>
+                  <span>2 Weeks</span>
+                </div>
+                <div class="students mx-2">
+                  <i class="bi bi-people-fill"></i>
+                  <span>156 Students</span>
+                </div>
+              </div>
+              <hr class="text-warning" />
+              <p>
+                <s class="me-2">$29.99</s>
+                <span class="text-success fw-bolder me-3">Free</span>
+                <span class="text-end"><u>View More</u></span>
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
+            style="width: 26rem"
+          >
+            <div class="cardbtn btn btn-light position-absolute m-3">
+              Development
+            </div>
+            <img
+              src="../static/dev.png"
+              class="card-img-top rounded-top-4"
+              alt="art"
+            />
+            <div class="card-body">
+              <h6 class="text-start">by Sai</h6>
+              <h3>Full-Stack Web Development Course</h3>
+              <div class="cardbase d-flex justify-content-center">
+                <div class="clock mx-2">
+                  <i class="bi bi-clock-fill"></i>
+                  <span>4 Weeks</span>
+                </div>
+                <div class="students mx-2">
+                  <i class="bi bi-people-fill"></i>
+                  <span>500 Students</span>
+                </div>
+              </div>
+              <hr class="text-warning" />
+              <p>
+                <s class="me-2">$49.99</s>
+                <span class="text-success fw-bolder me-2">$39.99</span>
+                <span class="text-end"><u>View More</u></span>
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
+            style="width: 26rem"
+          >
+            <div class="cardbtn btn btn-light position-absolute m-3">
+              Photography
+            </div>
+            <img
+              src="../static/photoguy.jpg"
+              class="card-img-top rounded-top-4"
+              alt="photo"
+            />
+            <div class="card-body">
+              <h6 class="text-start">by Sai</h6>
+              <h3>Pro Photography Course - For Beginners</h3>
+
+              <div class="cardbase d-flex justify-content-center">
+                <div class="clock mx-2">
+                  <i class="bi bi-clock-fill"></i>
+                  <span>2 Weeks</span>
+                </div>
+                <div class="students mx-2">
+                  <i class="bi bi-people-fill"></i>
+                  <span>89 Students</span>
+                </div>
+              </div>
+              <hr class="text-warning" />
+              <p>
+                <s class="me-2">$39.99</s>
+                <span class="text-success fw-bolder me-3">Free</span>
+                <span class="text-end"><u>View More</u></span>
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <br />
@@ -524,85 +852,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <br />
-
-      <!-- Banner -->
-      <section
-        class="container-fluid text-center d-none d-md-block"
-        id="banner"
-      >
-        <div class="position-relative" id="bannerdiv">
-          <img
-            src="../static/student.png"
-            alt="Student"
-            class="position-absolute"
-            id="student"
-            style="margin-left: 100px; margin-top: 100px"
-          />
-          <p
-            class="position-absolute fs-3 text-black"
-            style="margin-left: 400px; margin-top: 140px"
-          >
-            Begin Your Reign
-          </p>
-          <a
-            class="btn btn-primary position-absolute rounded-4"
-            href="#"
-            style="margin-left: 1150px; margin-top: 145px"
-            >I'm a Student</a
-          >
-          <a
-            class="btn btn-primary position-absolute rounded-4"
-            href="#"
-            style="margin-left: 1300px; margin-top: 145px"
-            >I'm an Instructor</a
-          >
-          <img
-            src="../static/banner.png"
-            alt="Banner"
-            class="img-fluid"
-            style="width: 1560px"
-          />
-        </div>
-      </section>
-
-      <!-- Banner for small screens -->
-      <section class="container-fluid text-center d-md-none" id="banner">
-        <div class="position-relative" id="bannerdiv">
-          <img
-            src="../static/student.png"
-            alt="Student"
-            class="position-absolute translate-middle"
-            id="student"
-            style="left: 220px; top: 100px"
-          />
-          <p
-            class="position-absolute fs-1 text-black translate-middle"
-            style="margin-left: 220px; margin-top: 225px; width: 250px"
-          >
-            Begin Your Reign
-          </p>
-          <a
-            class="btn btn-primary position-absolute rounded-4 translate-middle"
-            href="#"
-            style="margin-left: 220px; margin-top: 300px"
-            >I'm a Student</a
-          >
-          <a
-            class="btn btn-primary position-absolute rounded-4 translate-middle"
-            href="#"
-            style="margin-left: 220px; margin-top: 350px"
-            >I'm an Instructor</a
-          >
-          <img
-            src="../static/banner.png"
-            alt="Banner"
-            class="img-fluid rounded-5"
-            style="height: 400px; width: 450px"
-          />
         </div>
       </section>
 
