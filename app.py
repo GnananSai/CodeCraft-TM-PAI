@@ -12,6 +12,10 @@ def hello_world():
 def loginpage():
   return render_template("loginpage.html")
 
+@app.route("/<username>")
+def home(username):
+  return render_template('homepage.html',username = username)
+
 
 @app.route("/login", methods=['post'])
 def login():
@@ -23,7 +27,7 @@ def login():
     error = "User Not found"
   elif (password == real):
     print("passwords match")
-    return render_template('success.html')
+    return redirect(url_for('home', username=username))
   else:
     print("passwords dont match")
     error = "Incorrect Password"
