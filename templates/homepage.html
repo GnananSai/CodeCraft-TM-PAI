@@ -77,7 +77,7 @@
           class="navbar navbar-custom navbar-dark navbar-expand-lg bg-black border-bottom border-body fixed-top"
         >
           <div class="container-fluid">
-            <a class="navbar-brand mx-3" href="#">
+            <a class="navbar-brand mx-3" href="/">
               <img
                 src="../static/reign_resized.png"
                 alt="Reign"
@@ -106,7 +106,7 @@
                 class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end"
               >
                 <li class="nav-item mx-md-2 mb-2 mb-md-0">
-                  <a class="nav-link" href="#">Home</a>
+                  <a class="nav-link" href="/">Home</a>
                 </li>
 
                 <li class="nav-item mx-md-2 mb-2 mb-md-0">
@@ -145,12 +145,12 @@
 
                       <ul class="dropdown-menu">
                         <li>
-                          <a class="dropdown-item" type="button" href="#">
+                          <a class="dropdown-item" type="button" href="{{url_for('dashboard', username=username)}}">
                             Dashboard
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" type="button" href="#">
+                          <a class="dropdown-item" type="button" href="">
                             My Courses
                           </a>
                         </li>
@@ -160,7 +160,7 @@
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" type="button" href="#">
+                          <a class="dropdown-item" type="button" href="{{url_for('community', username=username)}}">
                             Community
                           </a>
                         </li>
@@ -193,7 +193,7 @@
 
                     <ul class="dropdown-menu dropdown-menu-md-end">
                       <li>
-                        <a class="dropdown-item" type="button" href="#">
+                        <a class="dropdown-item" type="button" href="{{url_for('dashboard', username=username)}}">
                           Dashboard
                         </a>
                       </li>
@@ -208,12 +208,12 @@
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="#">
+                        <a class="dropdown-item" type="button" href="{{url_for('community', username=username)}}">
                           Community
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="#">
+                        <a class="dropdown-item" type="button" href="{{url_for('focus', username=username)}}">
                           Focus Session
                         </a>
                       </li>

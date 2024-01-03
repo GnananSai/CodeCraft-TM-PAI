@@ -86,7 +86,7 @@
         class="navbar navbar-custom navbar-dark navbar-expand-lg bg-black border-bottom border-body fixed-top"
       >
         <div class="container-fluid">
-          <a class="navbar-brand mx-3" href="#">
+          <a class="navbar-brand mx-3" href="/">
             <img
               src="../static/reign_resized.png"
               alt="Reign"
@@ -115,11 +115,11 @@
               class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end"
             >
               <li class="nav-item mx-md-2 mb-2 mb-md-0">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="/">Home</a>
               </li>
 
               <li class="nav-item mx-md-2 mb-2 mb-md-0">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active" aria-current="page" href="/courses"
                   >Courses</a
                 >
               </li>
@@ -154,12 +154,12 @@
 
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" type="button" href="#">
+                        <a class="dropdown-item" type="button" href="{{url_for('dashboard', username=username)}}">
                           Dashboard
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="#">
+                        <a class="dropdown-item" type="button" href="">
                           My Courses
                         </a>
                       </li>
@@ -169,7 +169,7 @@
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="#">
+                        <a class="dropdown-item" type="button" href="{{url_for('community', username=username)}}">
                           Community
                         </a>
                       </li>
@@ -186,7 +186,7 @@
                     </ul>
                   </div>
                 </div>
-                <a class="nav-link nav-name" href="#">Gnana Sai</a>
+                <a class="nav-link nav-name" href="#">{{username}}</a>
               </li>
 
               <li class="nav-item mx-md-2 mb-2 mb-md-0 d-md-block d-none">
@@ -202,7 +202,7 @@
 
                   <ul class="dropdown-menu dropdown-menu-md-end">
                     <li>
-                      <a class="dropdown-item" type="button" href="#">
+                      <a class="dropdown-item" type="button" href="{{url_for('dashboard', username=username)}}">
                         Dashboard
                       </a>
                     </li>
@@ -217,12 +217,12 @@
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" type="button" href="#">
+                      <a class="dropdown-item" type="button" href="{{url_for('community', username=username)}}">
                         Community
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" type="button" href="#">
+                      <a class="dropdown-item" type="button" href="{{url_for('focus', username=username)}}">
                         Focus Session
                       </a>
                     </li>
@@ -403,6 +403,24 @@
             class="create-post card rounded-3 bg-dark border border-warning"
             style="width: 100%"
           >
+          <!-- Alert -->
+          {% if post %}
+          <div
+            class="alert alert-warning alert-dismissible fade show"
+            role="alert"
+          >
+            <strong>{{msg}}!!!</strong> {{post}}
+            <button
+              type="button"
+              class="close"
+              data-dismiss="alert"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          {% endif %}
+
             <div class="write-post-body card-body">
               <div class="write-post d-flex gap-3">
                 <img
@@ -411,10 +429,13 @@
                   alt="Profile Pic"
                   style="width: 40px; height: 40px"
                 />
+                <form action="{{url_for('posted', username=username)}}" method="post" id="form">
                 <input
                   class="input w-100 rounded-3 p-1 bg-dark border-light text-white"
-                  id="exampleInput"
+                  id="Input"
                   placeholder="Share something"
+                  name="post"
+                  form = "form"
                 />
               </div>
               <div class="buttons d-flex justify-content-between">
@@ -467,13 +488,11 @@
                     </div>
                   </div>
                 </div>
-                <a class="btn btn-warning text-black" style="height: 40px"
-                  >Create Post</a
-                >
+                <input class="btn btn-warning text-black" style="height: 40px" type="submit" form="form" value="Create Post"/>
               </div>
             </div>
           </div>
-
+          
           <div class="posts">
             <div class="card rounded-3 bg-dark border border-warning mt-5">
               <div class="card-body d-flex flex-column gap-3">

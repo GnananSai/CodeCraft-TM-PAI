@@ -16,6 +16,23 @@ def loginpage():
 def home(username):
   return render_template('homepage.html',username = username)
 
+@app.route("/<username>/dashboard")
+def dashboard(username):
+  return render_template('dashboard.html', username=username)
+
+@app.route("/<username>/community")
+def community(username):
+  return render_template('community.html', username=username)
+
+@app.route("/<username>/community", methods=['post'])
+def posted(username):
+  data = request.form
+  post = data['post']
+  return render_template('community.html', username=username , msg="Posted succesfully", post = post)
+
+@app.route("/<username>/focus-session")
+def focus(username):
+  return render_template('focus-session.html', username=username)
 
 @app.route("/login", methods=['post'])
 def login():
