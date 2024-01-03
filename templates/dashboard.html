@@ -1,265 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/main.css" rel="stylesheet" >
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <title>Dashboard</title>
     <style>
-        #dashboardHeader {
-            background-repeat: no-repeat;
-            background-size: cover; /* or background-size: contain; depending on your preference */
-            position: relative;
+      .navbar-custom {
+        height: 100px;
+      }
+      .dashboardHeader {
+        margin-top: 180px;
+        margin-left: 50px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .navbar-custom {
+          height: auto;
         }
-        .bg-image-fluid {
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        .nav-name {
+          position: absolute;
+          margin-left: 3rem;
         }
-        #person
-        {
-            position: absolute;
-            top: 170px;
-            left: 70px;
+        .dashboardHeader {
+          margin-top: 80px;
+          margin-left: 5px;
         }
-        #badges
-        {
-            background-color: black;
-        }
+      }
     </style>
-</head>
-<body style="background-color: black">
 
-  <!--navbar-->
-    <nav class="navbar navbar-expand-md navbar-light py-1">
-      <div class="container-xxl">
-        <a class="navbar-brand img-fluid" href="#">
-          <img
-            src="ReignLogo.jpg"
-            alt="Reign"
-            style="width: 100px; height: 80px"
-          /></a>
+    <!-- <style>
+      #dashboardHeader {
+        background-repeat: no-repeat;
+        background-size: cover; /* or background-size: contain; depending on your preference */
+        position: relative;
+      }
+      .bg-image-fluid {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      #person {
+        position: absolute;
+        top: 170px;
+        left: 70px;
+      }
+      #badges {
+        background-color: black;
+      }
+    </style> -->
+  </head>
+  <body class="bg-black">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <div class="container-fluid m-0 p-0">
+      <!-- Navbar -->
+      <section class="header">
+        <nav
+          class="navbar navbar-custom navbar-dark navbar-expand-lg bg-black border-bottom border-body fixed-top"
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand mx-3" href="#">
+              <img
+                src="../static/reign_resized.png"
+                alt="Reign"
+                class=""
+                style="width: 100px; height: 100px"
+              />
+            </a>
 
-
-      <!-- navbar links -->
-      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-white mx-2" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white mx-2" href="#reviews">Courses</a>
-          </li>
-          <form class="d-flex mx-2" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Find courses for you"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-light mx-2" type="submit">
-              Search
+            <button
+              class="navbar-toggler align-items-center justify-content-center me-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
             </button>
-          </form>
-          <li class="nav-item d-none d-md-inline">
-            <a class="btn btn-secondary text-white" href="#login">Login/Register</a>
-          </li>
-          
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  
-    <!--Header-->
-    <section id="dashboardHeader">
-         <header class="py-5 bg-image-fluid" style="background-image: url('https://source.unsplash.com/light-blue-to-dark-blue-gradient-pJadQetzTkI')">
-            <img  id="person" src="ProfilePic.png" alt="Profile Picture">
-            <div class="text-start my-5 mx-5">     
-                <h1 class="text-secondary fs-3 fw-bolder"><i class="bi bi-calendar-week text-dark"></i> DASHBOARD</h1>
+            <div
+              class="collapse navbar-collapse container-fluid bg-black"
+              id="navbarSupportedContent"
+            >
+              <ul
+                class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end"
+              >
+                <li class="nav-item mx-md-2 mb-2 mb-md-0">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+
+                <li class="nav-item mx-md-2 mb-2 mb-md-0">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Courses</a
+                  >
+                </li>
+
+                <li class="nav-item mx-md-2 mb-3 mb-md-0">
+                  <form class="d-flex" role="search">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search for Courses, People...."
+                      aria-label="Search"
+                    />
+                    <button
+                      class="btn btn-outline-primary text-light mx-1"
+                      type="submit"
+                    >
+                      Search
+                    </button>
+                  </form>
+                </li>
+
+                <li class="nav-item mx-md-2 mb-2 mb-md-0 d-flex">
+                  <div class="profile nav-item d-md-none d-block">
+                    <div class="dropdown">
+                      <img
+                        src="../static/person.png"
+                        class="dropdown-toggle rounded-circle"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="width: 35px; height: 35px"
+                      />
+
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Dashboard
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            My Courses
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Chat Bot
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Community
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Focus Session
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Progress Tools
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a class="nav-link nav-name" href="#">Gnana Sai</a>
+                </li>
+
+                <li class="nav-item mx-md-2 mb-2 mb-md-0 d-md-block d-none">
+                  <div class="btn-group">
+                    <img
+                      src="../static/person.png"
+                      class="dropdown-toggle rounded-circle"
+                      data-bs-toggle="dropdown"
+                      data-bs-display="static"
+                      aria-expanded="false"
+                      style="width: 35px; height: 35px"
+                    />
+
+                    <ul class="dropdown-menu dropdown-menu-md-end">
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Dashboard
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          My Courses
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Chat Bot
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Community
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Focus Session
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Progress Tools
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
             </div>
+          </div>
+        </nav>
+      </section>
+
+      <!--Header-->
+      <section id="dashboardHeader">
+        <header
+          class="py-5 bg-image-fluid"
+          style="
+            background-image: url('https://source.unsplash.com/light-blue-to-dark-blue-gradient-pJadQetzTkI');
+          "
+        >
+          <img id="person" src="ProfilePic.png" alt="Profile Picture" />
+          <div class="text-start my-5 mx-5">
+            <h1 class="text-secondary fs-3 fw-bolder">
+              <i class="bi bi-calendar-week text-dark"></i> DASHBOARD
+            </h1>
+          </div>
         </header>
         <div class="bg-altdark">
-            <div class="row justify-content-center py-4 px-5">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-8">
-                    <h5 class="text-primary">Username</h2>
-                    <p class="text-white">Student at Manipal Institute Of Technology</p>
-                </div>
-                <div class="col-lg-2">
-                    <button class="btn btn-primary text-white">Edit Profile</button>
-                </div>
+          <div class="row justify-content-center py-4 px-5">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+              <h5 class="text-primary">Username</h5>
+              <p class="text-white">
+                Student at Manipal Institute Of Technology
+              </p>
             </div>
+            <div class="col-lg-2">
+              <button class="btn btn-primary text-white">Edit Profile</button>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!--Badges-->
-    <section id="badges">
+      <!--Badges-->
+      <section id="badges">
         <div>
-            <div class="row justify-content-center py-4 px-5">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-9">
-                    <h2 class="text-white">My Badges</h2>
-                    <p class="text-white">Showcase of all the unique badges collected</p>
-                </div>
-                <div class="col-lg-2">
-                    <button class="btn btn-outline-secondary">All Badges</button>
-                </div>
+          <div class="row justify-content-center py-4 px-5">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-9">
+              <h2 class="text-white">My Badges</h2>
+              <p class="text-white">
+                Showcase of all the unique badges collected
+              </p>
             </div>
-
-            <!--cards-->
-            <div class="row my-3 ms-5 me-5 align-items-center justify-content-around">
-                <div class="col-1 col-lg-3 col-xl-3">
-                  <div class="card border-secondary bg-black">
-                    <div class="card-body text-center py-4 text-white">
-                        <img src="Achievement1.png">
-                        <h4 class="card-title">Showstoppers</h4>
-                        <p class="lead card-subtitle">Congrats</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-1 col-lg-3 col-xl-3">
-                    <div class="card border-secondary bg-black">
-                      <div class="card-body text-center py-4 text-white">
-                          <img src="Achievement2.png">
-                          <h4 class="card-title">Showstoppers</h4>
-                          <p class="lead card-subtitle">Congrats</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-1 col-lg-3 col-xl-3">
-                    <div class="card border-secondary bg-black">
-                      <div class="card-body text-center py-4 text-white">
-                          <img src="Achievement3.png">
-                          <h4 class="card-title">Showstoppers</h4>
-                          <p class="lead card-subtitle">Congrats</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-1 col-lg-3 col-xl-3">
-                    <div class="card border-secondary bg-black">
-                      <div class="card-body text-center py-4 text-white">
-                          <img src="Achievement1.png">
-                          <h4 class="card-title">Showstoppers</h4>
-                          <p class="lead card-subtitle">Congrats</p>
-                      </div>
-                    </div>
-                  </div>
+            <div class="col-lg-2">
+              <button class="btn btn-outline-secondary">All Badges</button>
             </div>
+          </div>
 
-            <div class="row my-5 ms-5 me-5 align-items-center justify-content-around">
-                <div class="col-1 col-lg-3 col-xl-3">
-                  <div class="card border-secondary bg-black">
-                    <div class="card-body text-center py-4 text-white">
-                        <img src="Achievement1.png">
-                        <h4 class="card-title">Showstoppers</h4>
-                        <p class="lead card-subtitle">Congrats</p>
-                    </div>
-                  </div>
+          <!--cards-->
+          <div
+            class="row my-3 ms-5 me-5 align-items-center justify-content-around"
+          >
+            <div class="col-1 col-lg-3 col-xl-3">
+              <div class="card border-secondary bg-black">
+                <div class="card-body text-center py-4 text-white">
+                  <img src="Achievement1.png" />
+                  <h4 class="card-title">Showstoppers</h4>
+                  <p class="lead card-subtitle">Congrats</p>
                 </div>
-
-                <div class="col-1 col-lg-3 col-xl-3">
-                    <div class="card border-secondary bg-black">
-                      <div class="card-body text-center py-4 text-white">
-                          <img src="Achievement2.png">
-                          <h4 class="card-title">Showstoppers</h4>
-                          <p class="lead card-subtitle">Congrats</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-1 col-lg-3 col-xl-3">
-                    <div class="card border-secondary bg-black">
-                      <div class="card-body text-center py-4 text-white">
-                          <img src="Achievement3.png">
-                          <h4 class="card-title">Showstoppers</h4>
-                          <p class="lead card-subtitle">Congrats</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-1 col-lg-3 col-xl-3">
-                    <div class="card border-secondary bg-black">
-                      <div class="card-body text-center py-4 text-white">
-                          <img src="Achievement1.png">
-                          <h4 class="card-title">Showstoppers</h4>
-                          <p class="lead card-subtitle">Congrats</p>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Reviews-->
-    <section id="reviews" class="bg-black">
-      <div class="container-lg">
-        <div class="text-center">
-          <h2 class="text-white"><i class="bi bi-person-check"></i> Student Reviews</h2>
-          <p class="lead text-white">Take a look at our users' experiences</p>
-        </div>
-
-        <div class="row justify-content-center my-5">
-          <div class="col-lg-8">
-            <div class="list-group">
-              <div class="list-group-item py-3">
-                <div class="pb-2">
-                  <i class="bi bi-star-fill text-altdark"></i>
-                  <i class="bi bi-star-fill text-altdark"></i>
-                  <i class="bi bi-star-fill text-altdark"></i>
-                  <i class="bi bi-star-fill text-altdark"></i>
-                  <i class="bi bi-star-fill text-altdark"></i>
-                </div>
-                <h5 class="mb-1">Very good</h5>
-                <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eius libero autem voluptatum doloribus nesciunt laudantium dolores, corporis modi eveniet aspernatur, vel minus, perferendis eligendi? Debitis in libero cupiditate esse!</p>
-                <small>Review By Sai</small>
               </div>
+            </div>
 
-              <div class="list-group-item py-3">
-                <div class="pb-2">
-                  <i class="bi bi-star-fill text-altdark"></i>
-                  <i class="bi bi-star-fill text-altdark"></i>
-                  <i class="bi bi-star-fill text-altdark"></i>
-                  <i class="bi bi-star-fill text-altdark"></i>
-                  <i class="bi bi-star-fill text-altdark"></i>
+            <div class="col-1 col-lg-3 col-xl-3">
+              <div class="card border-secondary bg-black">
+                <div class="card-body text-center py-4 text-white">
+                  <img src="Achievement2.png" />
+                  <h4 class="card-title">Showstoppers</h4>
+                  <p class="lead card-subtitle">Congrats</p>
                 </div>
-                <h5 class="mb-1">Very Good</h5>
-                <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eius libero autem voluptatum doloribus nesciunt laudantium dolores, corporis modi eveniet aspernatur, vel minus, perferendis eligendi? Debitis in libero cupiditate esse!</p>
-                <small>Review By Sai</small>
               </div>
+            </div>
 
-              <div class="list-group-item py-3">
-                <div class="pb-2">
-                  <i class="bi bi-star-fill text-altdark"></i>
-                  <i class="bi bi-star-fill text-altdark"></i>
-                  <i class="bi bi-star-fill text-altdark"></i>
-                  <i class="bi bi-star-fill text-altdark"></i>
-                  <i class="bi bi-star-fill text-altdark"></i>
+            <div class="col-1 col-lg-3 col-xl-3">
+              <div class="card border-secondary bg-black">
+                <div class="card-body text-center py-4 text-white">
+                  <img src="Achievement3.png" />
+                  <h4 class="card-title">Showstoppers</h4>
+                  <p class="lead card-subtitle">Congrats</p>
                 </div>
-                <h5 class="mb-1">Very Good</h5>
-                <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eius libero autem voluptatum doloribus nesciunt laudantium dolores, corporis modi eveniet aspernatur, vel minus, perferendis eligendi? Debitis in libero cupiditate esse!</p>
-                <small>Review By Sai</small>
+              </div>
+            </div>
+
+            <div class="col-1 col-lg-3 col-xl-3">
+              <div class="card border-secondary bg-black">
+                <div class="card-body text-center py-4 text-white">
+                  <img src="Achievement1.png" />
+                  <h4 class="card-title">Showstoppers</h4>
+                  <p class="lead card-subtitle">Congrats</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row my-5 ms-5 me-5 align-items-center justify-content-around"
+          >
+            <div class="col-1 col-lg-3 col-xl-3">
+              <div class="card border-secondary bg-black">
+                <div class="card-body text-center py-4 text-white">
+                  <img src="Achievement1.png" />
+                  <h4 class="card-title">Showstoppers</h4>
+                  <p class="lead card-subtitle">Congrats</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-1 col-lg-3 col-xl-3">
+              <div class="card border-secondary bg-black">
+                <div class="card-body text-center py-4 text-white">
+                  <img src="Achievement2.png" />
+                  <h4 class="card-title">Showstoppers</h4>
+                  <p class="lead card-subtitle">Congrats</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-1 col-lg-3 col-xl-3">
+              <div class="card border-secondary bg-black">
+                <div class="card-body text-center py-4 text-white">
+                  <img src="Achievement3.png" />
+                  <h4 class="card-title">Showstoppers</h4>
+                  <p class="lead card-subtitle">Congrats</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-1 col-lg-3 col-xl-3">
+              <div class="card border-secondary bg-black">
+                <div class="card-body text-center py-4 text-white">
+                  <img src="Achievement1.png" />
+                  <h4 class="card-title">Showstoppers</h4>
+                  <p class="lead card-subtitle">Congrats</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!--Progress with calendar-->
-    <section id="badges">
-      <div>
-        <div class="row justify-content-center py-4 px-5">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-11">
-                <h2 class="text-white">Progress</h2>
-                <p class="text-white">Your improvement, in a glance</p>
+      </section>
+
+      <br />
+      <br />
+
+      <!-- Footer -->
+      <footer class="bg-white container-fluid">
+        <div class="row mx-5 p-5 fs-5">
+          <div class="col">
+            <img
+              src="../static/reign_resized.png"
+              alt="Reign"
+              style="width: 100px; height: 100px"
+            />
+            <div class="text-wrap" style="width: 300px">
+              Reign is a leading Edu-tech platform that can provide you with top
+              standard courses and outstanding experience
             </div>
+          </div>
+          <div class="col">
+            <div class="ele my-2 fw-bolder">Content</div>
+            <div class="ele my-2">Top Categories</div>
+            <div class="ele my-2">Trending Courses</div>
+            <div class="ele my-2">Stats</div>
+            <div class="ele my-2">Reviews</div>
+            <div class="ele my-2">FAQs</div>
+          </div>
+          <div class="col">
+            <div class="ele my-2 fw-bolder">Programs</div>
+            <div class="ele my-2">Art & Design</div>
+            <div class="ele my-2">IT & Software</div>
+            <div class="ele my-2">Business</div>
+            <div class="ele my-2">Languages</div>
+            <div class="ele my-2">Programming</div>
+          </div>
+          <div class="col">
+            <div class="ele my-2 fw-bolder">Contact Us</div>
+            <div class="ele my-2">
+              Address: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="ele my-2">Tel: +69 - 6969696969</div>
+            <div class="ele my-2">Mail: reign_@gmail.com</div>
+            <div>
+              <i class="bi bi-facebook mx-2"></i>
+              <i class="bi bi-pinterest mx-2"></i>
+              <i class="bi bi-instagram mx-2"></i>
+              <i class="bi bi-twitter-x mx-2"></i>
+              <i class="bi bi-youtube mx-2"></i>
+            </div>
+          </div>
         </div>
-    </section>   
-</body>
+      </footer>
+    </div>
+  </body>
 </html>
