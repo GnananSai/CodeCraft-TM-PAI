@@ -29,7 +29,7 @@
       translate: middle;
       width: 445px;
     }
-    @static only screen and (max-width: 600px) {
+    @media only screen and (max-width: 600px) {
       .navbar-custom {
         height: auto;
       }
@@ -56,7 +56,7 @@
           class="navbar navbar-custom navbar-dark navbar-expand-lg bg-black border-bottom border-body fixed-top"
         >
           <div class="container-fluid">
-            <a class="navbar-brand mx-3" href="/">
+            <a class="navbar-brand mx-3" href="#">
               <img
                 src="../static/reign_resized.png"
                 alt="Reign"
@@ -85,7 +85,7 @@
                 class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end"
               >
                 <li class="nav-item mx-md-2 mb-2 mb-md-0">
-                  <a class="nav-link" aria-current="page" href="/">Home</a>
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
                 </li>
 
                 <li class="nav-item mx-md-2 mb-2 mb-md-0">
@@ -110,7 +110,9 @@
                 </li>
 
                 <li class="nav-item mx-md-5 mb-2 mb-md-0">
-                  <a class="btn btn-outline-primary text-light" href="#login"
+                  <a
+                    class="btn btn-outline-primary text-light"
+                    href="/loginpage"
                     >Login/Register</a
                   >
                 </li>
@@ -119,6 +121,7 @@
           </div>
         </nav>
       </section>
+
       <!-- Login/Register -->
       <section class="pages row justify-content-center">
         <!--Login-->
@@ -132,14 +135,21 @@
 
             <!-- Alert -->
             {% if msg %}
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <div
+              class="alert alert-warning alert-dismissible fade show"
+              role="alert"
+            >
               <strong>{{msg}}!!!</strong> Check the credentials
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="alert"
+                aria-label="Close"
+              >
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             {% endif %}
-
 
             <div class="card-body text-start py-4 text-black">
               <form action="/login" method="post" id="form">

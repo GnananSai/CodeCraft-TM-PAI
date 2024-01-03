@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utilities</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <style>
+      .navbar-custom {
+        height: 100px;
+      }
+
+      .todo {
+        margin-top: 180px;
+        margin-left: 100px;
+      }
+
+      .card {
+        width: 800px;
+      }
+      .progress-2 {
+        margin-left: 660px;
+      }
+      .list-cards {
+        border-style: dashed;
+        border: orange;
+      }
+      .taskadd {
+        margin-left: 10px;
+        gap: 610px;
+      }
+      @media only screen and (max-width: 600px) {
+        .progress-2 {
+          margin-left: 280px;
+        }
+        .card {
+          width: 100%;
+        }
+        .navbar-custom {
+          height: auto;
+        }
+        .nav-name {
+          position: absolute;
+          margin-left: 3rem;
+        }
+        .todo {
+          margin-top: 180px;
+          margin-left: auto;
+        }
+        .taskadd {
+          margin-left: 10px;
+          gap: 230px;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black w-100">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <div class="container-fluid m-0 p-0">
+      <!-- Navbar -->
+      <section class="header">
+        <nav
+          class="navbar navbar-custom navbar-dark navbar-expand-lg bg-black border-bottom border-body fixed-top"
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand mx-3" href="#">
+              <img
+                src="../static/reign_resized.png"
+                alt="Reign"
+                class=""
+                style="width: 100px; height: 100px"
+              />
+            </a>
+
+            <button
+              class="navbar-toggler align-items-center justify-content-center me-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="collapse navbar-collapse container-fluid bg-black"
+              id="navbarSupportedContent"
+            >
+              <ul
+                class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end"
+              >
+                <li class="nav-item mx-md-2 mb-2 mb-md-0">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+
+                <li class="nav-item mx-md-2 mb-2 mb-md-0">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Courses</a
+                  >
+                </li>
+
+                <li class="nav-item mx-md-2 mb-3 mb-md-0">
+                  <form class="d-flex" role="search">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search for Courses, People...."
+                      aria-label="Search"
+                    />
+                    <button
+                      class="btn btn-outline-primary text-light mx-1"
+                      type="submit"
+                    >
+                      Search
+                    </button>
+                  </form>
+                </li>
+
+                <li class="nav-item mx-md-2 mb-2 mb-md-0 d-flex">
+                  <div class="profile nav-item d-md-none d-block">
+                    <div class="dropdown">
+                      <img
+                        src="../static/person.png"
+                        class="dropdown-toggle rounded-circle"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="width: 35px; height: 35px"
+                      />
+
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Dashboard
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            My Courses
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Chat Bot
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Community
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Focus Session
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Progress Tools
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a class="nav-link nav-name" href="#">Gnana Sai</a>
+                </li>
+
+                <li class="nav-item mx-md-2 mb-2 mb-md-0 d-md-block d-none">
+                  <div class="btn-group">
+                    <img
+                      src="../static/person.png"
+                      class="dropdown-toggle rounded-circle"
+                      data-bs-toggle="dropdown"
+                      data-bs-display="static"
+                      aria-expanded="false"
+                      style="width: 35px; height: 35px"
+                    />
+
+                    <ul class="dropdown-menu dropdown-menu-md-end">
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Dashboard
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          My Courses
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Chat Bot
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Community
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Focus Session
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Progress Tools
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- TO-DO List -->
+      <section class="todo container-fluid d-flex flex-column">
+        <div class="d-flex flex-column">
+          <span class="text-warning fs-1 fw-bold mx-1">To-Do</span>
+          <div class="taskadd d-flex">
+            <small class="text-light">To Do (4)</small>
+            <div class="text-light">
+              <span>Add new task </span>
+              <i
+                class="bi bi-plus-lg text-light border border-light rounded-circle pointer-event"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <div class="list-cards d-flex flex-column gap-3 mx-1">
+          <div class="card bg-dark text-white rounded-3">
+            <div class="card-body">
+              <h5 class="card-title">Design New UI Presentation</h5>
+              <h6 class="text-light-emphasis">Marketing Course</h6>
+              <div class="mb-2">
+                <span class="text-light-emphasis">Progress</span>
+                <span class="progress-2 text-light-emphasis">7/10</span>
+              </div>
+              <div
+                class="progress mb-3"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="height: 5px"
+              >
+                <div class="progress-bar" style="width: 25%"></div>
+              </div>
+
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <span
+                  class="date rounded-pill border border-light-subtle text-light p-1 px-2"
+                >
+                  01 Jan 2024
+                </span>
+                <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
+                <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-dark text-white rounded-3">
+            <div class="card-body">
+              <h5 class="card-title">Design New UI Presentation</h5>
+              <h6 class="text-light-emphasis">Marketing Course</h6>
+              <div class="mb-2">
+                <span class="text-light-emphasis">Progress</span>
+                <span class="progress-2 text-light-emphasis">7/10</span>
+              </div>
+              <div
+                class="progress mb-3"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="height: 5px"
+              >
+                <div class="progress-bar" style="width: 25%"></div>
+              </div>
+
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <span
+                  class="date rounded-pill border border-light-subtle text-light p-1 px-2"
+                >
+                  01 Jan 2024
+                </span>
+                <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
+                <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-dark text-white rounded-3">
+            <div class="card-body">
+              <h5 class="card-title">Design New UI Presentation</h5>
+              <h6 class="text-light-emphasis">Marketing Course</h6>
+              <div class="mb-2">
+                <span class="text-light-emphasis">Progress</span>
+                <span class="progress-2 text-light-emphasis">7/10</span>
+              </div>
+              <div
+                class="progress mb-3"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="height: 5px"
+              >
+                <div class="progress-bar" style="width: 25%"></div>
+              </div>
+
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <span
+                  class="date rounded-pill border border-light-subtle text-light p-1 px-2"
+                >
+                  01 Jan 2024
+                </span>
+                <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
+                <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-dark text-white rounded-3">
+            <div class="card-body">
+              <h5 class="card-title">Design New UI Presentation</h5>
+              <h6 class="text-light-emphasis">Marketing Course</h6>
+              <div class="mb-2">
+                <span class="text-light-emphasis">Progress</span>
+                <span class="progress-2 text-light-emphasis">7/10</span>
+              </div>
+              <div
+                class="progress mb-3"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="height: 5px"
+              >
+                <div class="progress-bar" style="width: 25%"></div>
+              </div>
+
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <span
+                  class="date rounded-pill border border-light-subtle text-light p-1 px-2"
+                >
+                  01 Jan 2024
+                </span>
+                <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
+                <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br />
+      <br />
+      <br />
+
+      <!-- Footer -->
+      <footer class="bg-white container-fluid">
+        <div class="row mx-5 p-5 fs-5">
+          <div class="col">
+            <img
+              src="../static/reign_resized.png"
+              alt="Reign"
+              style="width: 100px; height: 100px"
+            />
+            <div class="text-wrap" style="width: 300px">
+              Reign is a leading Edu-tech platform that can provide you with top
+              standard courses and outstanding experience
+            </div>
+          </div>
+          <div class="col">
+            <div class="ele my-2 fw-bolder">Content</div>
+            <div class="ele my-2">Top Categories</div>
+            <div class="ele my-2">Trending Courses</div>
+            <div class="ele my-2">Stats</div>
+            <div class="ele my-2">Reviews</div>
+            <div class="ele my-2">FAQs</div>
+          </div>
+          <div class="col">
+            <div class="ele my-2 fw-bolder">Programs</div>
+            <div class="ele my-2">Art & Design</div>
+            <div class="ele my-2">IT & Software</div>
+            <div class="ele my-2">Business</div>
+            <div class="ele my-2">Languages</div>
+            <div class="ele my-2">Programming</div>
+          </div>
+          <div class="col">
+            <div class="ele my-2 fw-bolder">Contact Us</div>
+            <div class="ele my-2">
+              Address: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="ele my-2">Tel: +69 - 6969696969</div>
+            <div class="ele my-2">Mail: reign_@gmail.com</div>
+            <div>
+              <i class="bi bi-facebook mx-2"></i>
+              <i class="bi bi-pinterest mx-2"></i>
+              <i class="bi bi-instagram mx-2"></i>
+              <i class="bi bi-twitter-x mx-2"></i>
+              <i class="bi bi-youtube mx-2"></i>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

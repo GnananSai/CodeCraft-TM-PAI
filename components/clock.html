@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <style>
+      .navbar-custom {
+        height: 100px;
+      }
+
+      .clock {
+        margin-top: 200px;
+      }
+
+      .panel {
+        width: 200px;
+        justify-content: center;
+        padding: 10px;
+        align-self: center;
+      }
+
+      .circle {
+        width: 200px;
+        height: 200px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .navbar-custom {
+          height: auto;
+        }
+        .nav-name {
+          position: absolute;
+          margin-left: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <div class="container-fluid m-0 p-0">
+      <!-- Navbar -->
+      <section class="header">
+        <nav
+          class="navbar navbar-custom navbar-dark navbar-expand-lg bg-black border-bottom border-body fixed-top"
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand mx-3" href="#">
+              <img
+                src="../static/reign_resized.png"
+                alt="Reign"
+                class=""
+                style="width: 100px; height: 100px"
+              />
+            </a>
+
+            <button
+              class="navbar-toggler align-items-center justify-content-center me-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="collapse navbar-collapse container-fluid bg-black"
+              id="navbarSupportedContent"
+            >
+              <ul
+                class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end"
+              >
+                <li class="nav-item mx-md-2 mb-2 mb-md-0">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+
+                <li class="nav-item mx-md-2 mb-2 mb-md-0">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Courses</a
+                  >
+                </li>
+
+                <li class="nav-item mx-md-2 mb-3 mb-md-0">
+                  <form class="d-flex" role="search">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search for Courses, People...."
+                      aria-label="Search"
+                    />
+                    <button
+                      class="btn btn-outline-primary text-light mx-1"
+                      type="submit"
+                    >
+                      Search
+                    </button>
+                  </form>
+                </li>
+
+                <li class="nav-item mx-md-2 mb-2 mb-md-0 d-flex">
+                  <div class="profile nav-item d-md-none d-block">
+                    <div class="dropdown">
+                      <img
+                        src="../static/person.png"
+                        class="dropdown-toggle rounded-circle"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="width: 35px; height: 35px"
+                      />
+
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Dashboard
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            My Courses
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Chat Bot
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Community
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            TO-DO List
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Focus Session
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a class="nav-link nav-name" href="#">Gnana Sai</a>
+                </li>
+
+                <li class="nav-item mx-md-2 mb-2 mb-md-0 d-md-block d-none">
+                  <div class="btn-group">
+                    <img
+                      src="../static/person.png"
+                      class="dropdown-toggle rounded-circle"
+                      data-bs-toggle="dropdown"
+                      data-bs-display="static"
+                      aria-expanded="false"
+                      style="width: 35px; height: 35px"
+                    />
+
+                    <ul class="dropdown-menu dropdown-menu-md-end">
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Dashboard
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          My Courses
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Chat Bot
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Community
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          TO-DO List
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Focus Session
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- Clock -->
+      <div class="clock container-fluid d-flex flex-column">
+        <div class="panel d-flex gap-5 bg-primary rounded-pill">
+          <p class="work m-0">Work</p>
+          <p class="break m-0">Break</p>
+        </div>
+        <div class="circle bg-primary rounded-circle p-3">
+          <div class="circle2 bg-dark rounded-circle">
+            <div class="time d-flex gap-2">
+              <p class="minutes">25</p>
+              <p>:</p>
+              <p class="seconds">00</p>
+            </div>
+            <div class="buttons">
+              <a href="#" class="play pointer-event"
+                ><i class="bi bi-play-fill text-black"></i
+              ></a>
+              <a href="#" class="reset pointer-event"
+                ><i class="bi bi-arrow-counterclockwise text-black"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
