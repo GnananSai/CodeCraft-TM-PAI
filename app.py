@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, render_template, request, flash, redirect, url_for, get_flashed_messages
-from database import load_login_info, get_pass, register
+from database import load_login_info, get_pass, register, get_post, store_post, finish_course, get_user_course
 
 app = Flask(__name__)
 
@@ -22,12 +22,15 @@ def dashboard(username):
 
 @app.route("/<username>/community")
 def community(username):
-  return render_template('community.html', username=username)
+  data=get_post()
+  print(data)
+  return render_template('community.html', username=username, data=data)
 
 @app.route("/<username>/community", methods=['post'])
 def posted(username):
   data = request.form
   post = data['post']
+  store_post(post)
   return render_template('community.html', username=username , msg="Posted succesfully", post = post)
 
 @app.route("/<username>/focus-session")
@@ -82,6 +85,13 @@ def ucourses(username):
 @app.route("/<username>/utilities")
 def utilities(username):
   return render_template('utilities.html', username=username)
+
+@app.route("/<username>/<course_name>")
+def course_page(username, course_name):
+  return render_template('coursepage.html', course_name=course_name)
+def enrolled(username, course_name):
+  finish_course(username=username, course_name=course_name)
+  return render_template('coursepage.html', msg="Finished Successfully")
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
