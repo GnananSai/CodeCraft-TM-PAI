@@ -67,5 +67,9 @@ def register_page():
 def courses():
   return render_template('courses.html')
 
+@app.route("/<username>/mutherfucker")
+def mutherfucker(username):
+  return render_template('courses.html', username=username)
+
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)

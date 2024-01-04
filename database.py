@@ -31,8 +31,17 @@ def get_pass(user):
     except:
       return None
 
+def get_course_data():
+  with engine.connect() as conn:
+    result = conn.execute(text("select * from course_details"))
+    result_dict = []
+    for row in result:
+      result_dict.append(row._mapping)
+  print(result_dict)  
 
 def register(user, pw, email):
   with engine.connect() as conn:
     conn.execute(text("INSERT INTO login_info (username, pw, email) VALUES (:u, :p, :e)"),dict(u=user, p=pw, e=email))  
     conn.commit()
+
+get_course_data()
