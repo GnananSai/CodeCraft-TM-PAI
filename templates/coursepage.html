@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultimate Course on C - by Gnana Sai</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <style>
+      .navbar-custom {
+        height: 100px;
+      }
+
+      .course-banner {
+        margin-top: 100px;
+      }
+      .course-img {
+        width: 500px;
+      }
+      .other-things {
+        flex-direction: row;
+        margin-left: 3rem;
+        margin-right: 3rem;
+      }
+      .course-details {
+        width: 75%;
+      }
+      .course-img {
+        width: 25%;
+      }
+      @media only screen and (max-width: 600px) {
+        .course-banner {
+          margin-top: 127px;
+        }
+        .navbar-custom {
+          height: auto;
+        }
+        .nav-name {
+          position: absolute;
+          margin-left: 3rem;
+        }
+        .course-stats {
+          width: 400px;
+        }
+        .course-img {
+          width: fit-content;
+        }
+        .other-things {
+          flex-direction: column;
+          margin-left: 1rem;
+          margin-right: 1rem;
+        }
+        .course-details {
+          width: fit-content;
+        }
+        .course-img {
+          width: fit-content;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <div class="p-0 m-0">
+      <!-- Navbar -->
+      <section class="header">
+        <nav
+          class="navbar navbar-custom navbar-dark navbar-expand-lg bg-black border-bottom border-body fixed-top"
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand mx-3" href="/">
+              <img
+                src="../static/reign_resized.png"
+                alt="Reign"
+                class=""
+                style="width: 100px; height: 100px"
+              />
+            </a>
+
+            <button
+              class="navbar-toggler align-items-center justify-content-center me-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="collapse navbar-collapse container-fluid bg-black"
+              id="navbarSupportedContent"
+            >
+              <ul
+                class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end"
+              >
+                <li class="nav-item mx-md-2 mb-2 mb-md-0">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+
+                <li class="nav-item mx-md-2 mb-2 mb-md-0">
+                  <a class="nav-link active" aria-current="page" href="/courses"
+                    >Courses</a
+                  >
+                </li>
+
+                <li class="nav-item mx-md-2 mb-3 mb-md-0">
+                  <form class="d-flex" role="search">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search for Courses, People...."
+                      aria-label="Search"
+                    />
+                    <button
+                      class="btn btn-outline-primary text-light mx-1"
+                      type="submit"
+                    >
+                      Search
+                    </button>
+                  </form>
+                </li>
+
+                <li class="nav-item mx-md-2 mb-2 mb-md-0 d-flex">
+                  <div class="profile nav-item d-md-none d-block">
+                    <div class="dropdown">
+                      <img
+                        src="../static/person.png"
+                        class="dropdown-toggle rounded-circle"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="width: 35px; height: 35px"
+                      />
+
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            type="button"
+                            href="{{url_for('dashboard', username=username)}}"
+                          >
+                            Dashboard
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="">
+                            My Courses
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Chat Bot
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            type="button"
+                            href="{{url_for('community', username=username)}}"
+                          >
+                            Community
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Focus Session
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" type="button" href="#">
+                            Progress Tools
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a class="nav-link nav-name" href="#">{{username}}</a>
+                </li>
+
+                <li class="nav-item mx-md-2 mb-2 mb-md-0 d-md-block d-none">
+                  <div class="btn-group">
+                    <img
+                      src="../static/person.png"
+                      class="dropdown-toggle rounded-circle"
+                      data-bs-toggle="dropdown"
+                      data-bs-display="static"
+                      aria-expanded="false"
+                      style="width: 35px; height: 35px"
+                    />
+
+                    <ul class="dropdown-menu dropdown-menu-md-end">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="{{url_for('dashboard', username=username)}}"
+                        >
+                          Dashboard
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          My Courses
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Chat Bot
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="{{url_for('community', username=username)}}"
+                        >
+                          Community
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="{{url_for('focus', username=username)}}"
+                        >
+                          Focus Session
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" type="button" href="#">
+                          Progress Tools
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- Course Content -->
+      <section class="course-content d-flex flex-column gap-5">
+        <!-- Course Banner -->
+        <div
+          class="course-banner bg-primary d-flex flex-column justify-content-center align-items-center"
+        >
+          <div class="d-flex justify-content-center align-items-center mx-5">
+            <div class="mt-1">
+              <button class="btn btn-warning my-3">Coding</button>
+            </div>
+            <h5 class="text-white mt-2 mx-2">by Gnana Sai</h5>
+          </div>
+          <div
+            class="d-flex justify-content-center align-items-center gap-2 border-warning my-1"
+          >
+            <h1 class="text-white">The Ultimate Course On C</h1>
+          </div>
+          <div
+            class="course-stats d-flex justify-content-center align-items-center gap-3 flex-wrap bg-warning rounded-pill p-3 mb-3"
+          >
+            <div class="d-flex gap-2">
+              <i class="bi bi-clock-fill text-black"></i>
+              <span class="text-black">2 weeks</span>
+            </div>
+            <div class="d-flex gap-2">
+              <i class="bi bi-mortarboard-fill text-black"></i>
+              <span class="text-black">156 students</span>
+            </div>
+            <div class="d-flex gap-2">
+              <i class="bi bi-bar-chart-fill text-black"></i>
+              <span class="text-black">All levels</span>
+            </div>
+            <div class="d-flex gap-2">
+              <i class="bi bi-file-earmark-fill text-black"></i>
+              <span class="text-black">20 lessons</span>
+            </div>
+            <div class="d-flex gap-2">
+              <i class="bi bi-question-diamond-fill text-black"></i>
+              <span class="text-black">5 quizzes</span>
+            </div>
+          </div>
+        </div>
+        <!-- Other things -->
+        <div class="other-things d-flex gap-5">
+          <!-- Course Details -->
+          <div class="course-details">
+            <div class="p-0">
+              <ul
+                class="nav nav-tabs text-white border border-white border-bottom-0 p-0 rounded-top-3 w-100 d-flex justify-content-evenly fs-5"
+                id="myTab"
+                role="tablist"
+              >
+                <li
+                  class="nav-item border border-white w-25"
+                  role="presentation"
+                >
+                  <a
+                    class="nav-link active d-flex gap-2 justify-content-center"
+                    id="overview-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#overview-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="overview-tab-pane"
+                    aria-selected="true"
+                  >
+                    <i class="bi bi-eye-fill"></i>
+                    <span class="d-none d-md-block">Overview</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item border border-white w-25"
+                  role="presentation"
+                >
+                  <a
+                    class="nav-link d-flex gap-2 justify-content-center"
+                    id="curriculum-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#curriculum-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="curriculum-tab-pane"
+                    aria-selected="false"
+                  >
+                    <i class="bi bi-journal-text"></i>
+                    <span class="d-none d-md-block"> Curriculum</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item border border-white w-25"
+                  role="presentation"
+                >
+                  <a
+                    class="nav-link d-flex gap-2 justify-content-center"
+                    id="instructors-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#instructors-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="instructors-tab-pane"
+                    aria-selected="false"
+                  >
+                    <i class="bi bi-person-circle"></i>
+                    <span class="d-none d-md-block">Instructors</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item border border-white w-25"
+                  role="presentation"
+                >
+                  <a
+                    class="nav-link d-flex gap-2 justify-content-center"
+                    id="review-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#review-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="review-tab-pane"
+                    aria-selected="false"
+                  >
+                    <i class="bi bi-star-fill"></i>
+                    <span class="d-none d-md-block">Reviews</span>
+                  </a>
+                </li>
+              </ul>
+              <div
+                class="tab-content text-white border border-warning rounded-bottom"
+                id="myTabContent"
+              >
+                <div
+                  class="tab-pane fade show active"
+                  id="overview-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="overview-tab"
+                  tabindex="0"
+                >
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Quaerat doloribus inventore possimus modi quae molestiae
+                  similique quam, nesciunt, ratione amet officiis? Perspiciatis
+                  porro commodi molestiae in dolore dicta error illum.
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="curriculum-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="curriculum-tab"
+                  tabindex="0"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Repellat aperiam expedita at mollitia corrupti ad libero
+                  dignissimos dolorum deserunt ipsa nobis, pariatur itaque ut
+                  esse totam nisi eius sunt voluptatibus!
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="instructors-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="instructors-tab"
+                  tabindex="0"
+                >
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Consequuntur ipsum explicabo in fugit. Quibusdam repellat
+                  consequatur dolorum harum, perferendis cum. Sunt impedit
+                  cumque ut tempora consectetur maxime perferendis, iste natus?
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="review-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="review-tab"
+                  tabindex="0"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                  velit quod ipsa debitis, accusamus a natus ipsum unde. Quos
+                  eos pariatur maiores dolorem molestias vero eius impedit nulla
+                  necessitatibus? Explicabo?
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image  -->
+          <div class="course-img card border border-warning bg-black">
+            <img
+              class="card-img-top"
+              src="../static/StudyGroup.png"
+              alt="Study Group"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-center align-items-center p-2">
+                <button class="btn btn-outline-primary text-white my-1">
+                  ENROLL NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br /><br />
+      <!-- Footer -->
+      <footer class="bg-white container-fluid">
+        <div class="row mx-5 p-5 fs-5">
+          <div class="col">
+            <img
+              src="../static/reign_resized.png"
+              alt="Reign"
+              style="width: 100px; height: 100px"
+            />
+            <div class="text-wrap" style="width: 300px">
+              Reign is a leading Edu-tech platform that can provide you with top
+              standard courses and outstanding experience
+            </div>
+          </div>
+          <div class="col">
+            <div class="ele my-2 fw-bolder">Content</div>
+            <div class="ele my-2">Top Categories</div>
+            <div class="ele my-2">Trending Courses</div>
+            <div class="ele my-2">Stats</div>
+            <div class="ele my-2">Reviews</div>
+            <div class="ele my-2">FAQs</div>
+          </div>
+          <div class="col">
+            <div class="ele my-2 fw-bolder">Programs</div>
+            <div class="ele my-2">Art & Design</div>
+            <div class="ele my-2">IT & Software</div>
+            <div class="ele my-2">Business</div>
+            <div class="ele my-2">Languages</div>
+            <div class="ele my-2">Programming</div>
+          </div>
+          <div class="col">
+            <div class="ele my-2 fw-bolder">Contact Us</div>
+            <div class="ele my-2">
+              Address: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="ele my-2">Tel: +69 - 6969696969</div>
+            <div class="ele my-2">Mail: reign_@gmail.com</div>
+            <div>
+              <i class="bi bi-facebook mx-2"></i>
+              <i class="bi bi-pinterest mx-2"></i>
+              <i class="bi bi-instagram mx-2"></i>
+              <i class="bi bi-twitter-x mx-2"></i>
+              <i class="bi bi-youtube mx-2"></i>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

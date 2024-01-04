@@ -168,7 +168,11 @@
 
                       <ul class="dropdown-menu">
                         <li>
-                          <a class="dropdown-item" type="button" href="{{url_for('dashboard', username=username)}}">
+                          <a
+                            class="dropdown-item"
+                            type="button"
+                            href="{{url_for('dashboard', username=username)}}"
+                          >
                             Dashboard
                           </a>
                         </li>
@@ -183,7 +187,11 @@
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" type="button" href="{{url_for('community', username=username)}}">
+                          <a
+                            class="dropdown-item"
+                            type="button"
+                            href="{{url_for('community', username=username)}}"
+                          >
                             Community
                           </a>
                         </li>
@@ -216,7 +224,11 @@
 
                     <ul class="dropdown-menu dropdown-menu-md-end">
                       <li>
-                        <a class="dropdown-item" type="button" href="{{url_for('dashboard', username=username)}}">
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="{{url_for('dashboard', username=username)}}"
+                        >
                           Dashboard
                         </a>
                       </li>
@@ -231,12 +243,20 @@
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="{{url_for('community', username=username)}}">
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="{{url_for('community', username=username)}}"
+                        >
                           Community
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="{{url_for('focus', username=username)}}">
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="{{url_for('focus', username=username)}}"
+                        >
                           Focus Session
                         </a>
                       </li>
@@ -516,42 +536,42 @@
             </ul>
 
             {% for i in range(5) %}
-              <div
-            class="card-div card mb-3 bg-black text-white border border-warning align-content-center text-center rounded-4"
-            style="max-width: 840px"
-          >
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img
-                  src="../static/art.png"
-                  class="img-fluid rounded-start"
-                  alt="Art"
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h6 class="text-start">by {{i}}</h6>
-                  <h3>Fine Arts and Modern Design Course</h3>
-                  <div class="cardbase d-flex justify-content-center">
-                    <div class="clock mx-2">
-                      <i class="bi bi-clock-fill"></i>
-                      <span>2 Weeks</span>
+            <div
+              class="card-div card mb-3 bg-black text-white border border-warning align-content-center text-center rounded-4"
+              style="max-width: 840px"
+            >
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="../static/art.png"
+                    class="img-fluid rounded-start"
+                    alt="Art"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h6 class="text-start">by {{i}}</h6>
+                    <h3>Fine Arts and Modern Design Course</h3>
+                    <div class="cardbase d-flex justify-content-center">
+                      <div class="clock mx-2">
+                        <i class="bi bi-clock-fill"></i>
+                        <span>2 Weeks</span>
+                      </div>
+                      <div class="students mx-2">
+                        <i class="bi bi-people-fill"></i>
+                        <span>156 Students</span>
+                      </div>
                     </div>
-                    <div class="students mx-2">
-                      <i class="bi bi-people-fill"></i>
-                      <span>156 Students</span>
-                    </div>
+                    <hr class="text-warning" />
+                    <p>
+                      <s class="me-2">$29.99</s>
+                      <span class="text-success fw-bolder me-3">Free</span>
+                      <span class="text-end"><u>View More</u></span>
+                    </p>
                   </div>
-                  <hr class="text-warning" />
-                  <p>
-                    <s class="me-2">$29.99</s>
-                    <span class="text-success fw-bolder me-3">Free</span>
-                    <span class="text-end"><u>View More</u></span>
-                  </p>
                 </div>
               </div>
             </div>
-              </div>
             {% endfor %}
           </div>
           <div
