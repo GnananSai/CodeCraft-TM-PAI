@@ -37,11 +37,9 @@ def get_course_data():
     result_dict = []
     for row in result:
       result_dict.append(row._mapping)
-  print(result_dict)  
+  return (result_dict)  
 
 def register(user, pw, email):
   with engine.connect() as conn:
     conn.execute(text("INSERT INTO login_info (username, pw, email) VALUES (:u, :p, :e)"),dict(u=user, p=pw, e=email))  
     conn.commit()
-
-get_course_data()

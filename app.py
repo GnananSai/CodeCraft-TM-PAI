@@ -55,21 +55,33 @@ def register_page():
   data = request.form
   email = data['email']
   username = data['username']
+  users = load_login_info()
+  counter=False
+  for user in users:
+    if(user['username']==username):
+      counter=True
+      break
   password = data['password']
   confirm = data['confirm']
+  if(counter):
+    return render_template('loginpage.html', msg="User already exists")
   if(confirm==password):
     register(username, password, email)
-    return render_template('success.html')
+    return render_template('loginpage.html', msg="Register Succesfull")
   else:
-    return render_template('fail.html')
+    return render_template('loginpage.html', msg="Passwords do not match")
     
 @app.route("/courses")
 def courses():
   return render_template('courses.html')
 
-@app.route("/<username>/mutherfucker")
-def mutherfucker(username):
+@app.route("/<username>/ucourses")
+def ucourses(username):
   return render_template('courses.html', username=username)
+
+@app.route("/<username>/utilities")
+def utilities(username):
+  return render_template('utilities.html', username=username)
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)

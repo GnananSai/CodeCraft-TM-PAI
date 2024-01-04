@@ -170,20 +170,21 @@
           </div>
         </div>
         <div class="row d-flex justify-content-center">
-          <div
+          <a
             class="card m-3 p-5 p-5 bg-black text-white border border-warning rounded-4 align-content-center text-center"
-            style="width: 18rem"
+            style="width: 18rem; cursor: pointer"
+            href="{{url_for('courses')}}"
           >
             <div class="card-body">
               <div class="mb-3 icons"><i class="bi bi-palette-fill"></i></div>
               <h4 class="card-title">Art & Design</h4>
               <h5 class="card-subtitle mb-2 text-light">38 Courses</h5>
             </div>
-          </div>
+          </a>
 
-          <div
+          <a
             class="card m-3 p-5 bg-black text-white border border-warning rounded-4 align-content-center text-center"
-            style="width: 18rem"
+            style="width: 18rem" href="{{url_for('courses')}}"
           >
             <div class="card-body">
               <div class="mb-3 icons">
@@ -192,22 +193,22 @@
               <h4 class="card-title">Development</h4>
               <h5 class="card-subtitle mb-2 text-light">23 Courses</h5>
             </div>
-          </div>
+          </a>
 
-          <div
+          <a
             class="card m-3 p-5 px-4 bg-black text-white border border-warning rounded-4 align-content-center text-center"
-            style="width: 18rem"
+            style="width: 18rem" href="{{url_for('courses')}}"
           >
             <div class="card-body">
               <div class="icons mb-3"><i class="bi bi-broadcast"></i></div>
               <h4 class="card-title">Communication</h4>
               <h5 class="card-subtitle mb-2 text-light">10 Courses</h5>
             </div>
-          </div>
+          </a>
 
-          <div
+          <a
             class="card m-3 p-5 bg-black text-white border border-warning rounded-4 align-content-center text-center"
-            style="width: 18rem"
+            style="width: 18rem" href="{{url_for('courses')}}"
           >
             <div class="card-body">
               <div class="icons mb-3">
@@ -216,22 +217,22 @@
               <h4 class="card-title">Videography</h4>
               <h5 class="card-subtitle mb-2 text-light">6 Courses</h5>
             </div>
-          </div>
+          </a>
 
-          <div
+          <a
             class="card m-3 p-5 bg-black text-white border border-warning rounded-4 align-content-center text-center"
-            style="width: 18rem"
+            style="width: 18rem" href="{{url_for('courses')}}"
           >
             <div class="card-body">
               <div class="icons mb-3"><i class="bi bi-camera-fill"></i></div>
               <h4 class="card-title">Photography</h4>
               <h5 class="card-subtitle mb-2 text-light">12 Courses</h5>
             </div>
-          </div>
+          </a>
 
-          <div
+          <a
             class="card m-3 p-5 bg-black text-white border border-warning rounded-4 align-content-center text-center"
-            style="width: 18rem"
+            style="width: 18rem" href="{{url_for('courses')}}"
           >
             <div class="card-body">
               <div class="icons mb-3">
@@ -240,11 +241,11 @@
               <h4 class="card-title">Marketing</h4>
               <h5 class="card-subtitle mb-2 text-light">30 Courses</h5>
             </div>
-          </div>
+          </a>
 
-          <div
+          <a
             class="card m-3 p-5 bg-black text-white border border-warning rounded-4 align-content-center text-center"
-            style="width: 18rem"
+            style="width: 18rem" href="{{url_for('courses')}}"
           >
             <div class="card-body">
               <div class="icons mb-3">
@@ -253,11 +254,11 @@
               <h4 class="card-title">Content Writing</h4>
               <h5 class="card-subtitle mb-2 text-light">15 Courses</h5>
             </div>
-          </div>
+          </a>
 
-          <div
+          <a
             class="card m-3 p-5 bg-black text-white border border-warning rounded-4 align-content-center text-center"
-            style="width: 18rem"
+            style="width: 18rem" href="{{url_for('courses')}}"
           >
             <div class="card-body">
               <div class="icons mb-3">
@@ -266,11 +267,11 @@
               <h4 class="card-title">Finance</h4>
               <h5 class="card-subtitle mb-2 text-light">32 Courses</h5>
             </div>
-          </div>
+          </a>
 
-          <div
+          <a
             class="card m-3 p-5 bg-black text-white border border-warning rounded-4 align-content-center text-center"
-            style="width: 18rem"
+            style="width: 18rem" href="{{url_for('courses')}}"
           >
             <div class="card-body">
               <div class="icons mb-3">
@@ -279,18 +280,18 @@
               <h4 class="card-title">Science</h4>
               <h5 class="card-subtitle mb-2 text-light">38 Courses</h5>
             </div>
-          </div>
+          </a>
 
-          <div
+          <a
             class="card m-3 p-5 bg-black text-white border border-warning rounded-4 align-content-center text-center"
-            style="width: 18rem"
+            style="width: 18rem" href="{{url_for('courses')}}"
           >
             <div class="card-body">
               <div class="icons mb-3"><i class="bi bi-wifi"></i></div>
               <h4 class="card-title">Network</h4>
               <h5 class="card-subtitle mb-2 text-light">38 Courses</h5>
             </div>
-          </div>
+          </a>
         </div>
       </section>
 
@@ -305,7 +306,7 @@
             <h6>Explore our popular courses</h6>
           </div>
           <div class="col-auto">
-            <a href="#" class="btn btn-outline-primary">All Courses</a>
+            <a href="{{url_for('courses')}}" class="btn btn-outline-primary">All Courses</a>
           </div>
         </div>
 

@@ -76,7 +76,7 @@
                   class="navbar navbar-custom navbar-dark navbar-expand-lg bg-black border-bottom border-body fixed-top"
                 >
                   <div class="container-fluid">
-                    <a class="navbar-brand mx-3" href="url_for('home', username=username)">
+                    <a class="navbar-brand mx-3" href="{{url_for('home', username=username)}}">
                       <img
                         src="../static/reign_resized.png"
                         alt="Reign"
@@ -109,7 +109,7 @@
                         </li>
         
                         <li class="nav-item mx-md-2 mb-2 mb-md-0">
-                          <a class="nav-link" href="{{url_for('mutherfucker', username=username)}}"
+                          <a class="nav-link" href="{{url_for('ucourses', username=username)}}"
                             >Courses</a
                           >
                         </li>
@@ -154,7 +154,7 @@
                                   </a>
                                 </li>
                                 <li>
-                                  <a class="dropdown-item" type="button" href=" http://10.87.4.182:8501">
+                                  <a class="dropdown-item" type="button" href="http://localhost:8501" target="_blank">
                                     Chat Bot
                                   </a>
                                 </li>
@@ -164,12 +164,12 @@
                                   </a>
                                 </li>
                                 <li>
-                                  <a class="dropdown-item" type="button" href="#">
+                                  <a class="dropdown-item" type="button" href="{{url_for('focus', username=username)}}" target="_blank">
                                     Focus Session
                                   </a>
                                 </li>
                                 <li>
-                                  <a class="dropdown-item" type="button" href="#">
+                                  <a class="dropdown-item" type="button" href="{{url_for('utilities', username=username)}}">
                                     Progress Tools
                                   </a>
                                 </li>
@@ -218,7 +218,7 @@
                                 </a>
                               </li>
                               <li>
-                                <a class="dropdown-item" type="button" href="#">
+                                <a class="dropdown-item" type="button" href="{{url_for('utilities', username=username)}}">
                                   Progress Tools
                                 </a>
                               </li>
