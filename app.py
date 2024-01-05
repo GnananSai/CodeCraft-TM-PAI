@@ -45,6 +45,9 @@ def register_page():
     return render_template('success.html')
   else:
     return render_template('fail.html')
+  
+
+  
     
 
 

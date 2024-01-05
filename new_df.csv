@@ -1,0 +1,290 @@
+,Course Title,Instructors,tags
+0,Circuits and Electronics,['KhurramAfridi'],scienc technolog engin and mathemat khurramafridi mitx
+1,Introduction to Computer Science and Programming,"['EricGrimson', 'JohnGuttag', 'ChrisTerman']",comput scienc ericgrimson johnguttag christerman mitx
+2,Introduction to Solid State Chemistry,['MichaelCima'],scienc technolog engin and mathemat michaelcima mitx
+3,Introduction to Computer Science,"['DavidMalan', 'NateHardison', 'RobBowden', 'TommyMacWilliam', 'ZamylaChan']",comput scienc davidmalan natehardison robbowden tommymacwilliam zamylachan harvardx
+4,Health in Numbers: Quantitative Methods in Clinical and Public Health Research,"['EarlFrancisCook', 'MarcelloPagano']",govern health and social scienc earlfranciscook marcellopagano harvardx
+5,Introduction to Computer Science and Programming,['LarryRudolph'],comput scienc larryrudolph mitx
+6,Introduction to Solid State Chemistry,['MichaelCima'],scienc technolog engin and mathemat michaelcima mitx
+7,The Challenges of Global Poverty,"['EstherDuflo', 'AbhijitBanerjee']",govern health and social scienc estherduflo abhijitbanerje mitx
+8,Electricity and Magnetism,"['WalterLewin', 'JohnBelcher', 'PeterDourmashkin', 'RicardoAbbate', 'SaifRayyan', 'GeorgeStephans', 'IsaacChuang']",scienc technolog engin and mathemat walterlewin johnbelch peterdourmashkin ricardoabb saifrayyan georgestephan isaacchuang mitx
+9,Justice,['MichaelSandel'],human histori design religion and educ michaelsandel harvardx
+10,Circuits and Electronics,['TaniaKhanna'],scienc technolog engin and mathemat taniakhanna mitx
+11,Introduction to Biology: Secret of Life,"['EricLander', 'GrahamWalker', 'BrianWhite', 'Michelle', 'Mischke', 'MaryEllenWiltrout']",scienc technolog engin and mathemat ericland grahamwalk brianwhit michel mischk maryellenwiltrout mitx
+12,The Ancient Greek Hero,"['GregNagy', 'L.Muellner']",human histori design religion and educ gregnagi l.muellner harvardx
+13,Elements of Structures,"['SimonaSocrate', 'AlexieKolpak']",scienc technolog engin and mathemat simonasocr alexiekolpak mitx
+14,Human Health and Global Environmental Change,"['AaronBernstein', 'JackSpengler']",govern health and social scienc aaronbernstein jackspengl harvardx
+15,Mechanics ReView,"['DavidPritchard', 'ColinFredericks']",scienc technolog engin and mathemat davidpritchard colinfrederick mitx
+16,Introduction to Solid State Chemistry,['MichaelCima'],scienc technolog engin and mathemat michaelcima mitx
+17,The Ancient Greek Hero,['GregNagy'],human histori design religion and educ gregnagi harvardx
+18,Classical Mechanics,['WalterLewin'],scienc technolog engin and mathemat walterlewin mitx
+19,Introduction to Biology: Secret of Life,['EricLander'],scienc technolog engin and mathemat ericland mitx
+20,Innovation and Commercialization,['GeneFitzgerald'],govern health and social scienc genefitzgerald mitx
+21,Global Architecture,['MarkJarzombek'],human histori design religion and educ markjarzombek mitx
+22,"Central Challenges in American National Security, Strategy and the Press: An Introduction","['GrahamAllison', 'DavidSanger']",govern health and social scienc grahamallison davidsang harvardx
+23,"Introduction to Philosophy: God, Knowledge and Consciousness",['CasparHare'],human histori design religion and educ casparhar mitx
+24,Science and Cooking: From Haute Cuisine to Soft Matter Science,['MichaelBrenner'],scienc technolog engin and mathemat michaelbrenn harvardx
+25,Fundamentals of Clinical Trials,"['JamesWare', 'ElliottAntman', 'JulieBuring', 'GrahamMcMahon', 'MarciaTesta', 'RobertTruog']",govern health and social scienc jameswar elliottantman juliebur grahammcmahon marciatesta roberttruog harvardx
+26,Circuits and Electronics,['AnantAgarwal'],scienc technolog engin and mathemat anantagarw mitx
+27,Introduction to Computer Science and Programming,"['EricGrimson', 'JohnGuttag']",comput scienc ericgrimson johnguttag mitx
+28,Dynamics and Control I,['DavidGossard'],scienc technolog engin and mathemat davidgossard mitx
+29,The Political and Intellectual Foundations of China,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+30,Poetry in America: The Poetry of Early New England,['ElisaNew'],human histori design religion and educ elisanew harvardx
+31,Health and Society,['IchiroKawachi'],govern health and social scienc ichirokawachi harvardx
+32,Introduction to Computer Science,['DavidMalan'],comput scienc davidmalan harvardx
+33,The Creation and End of a Centralized Empire,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+34,Early Christianity: The Letters of Paul,['LauraNasrallah'],human histori design religion and educ lauranasrallah harvardx
+35,Poetry in America: Whitman,['ElisaNew'],human histori design religion and educ elisanew harvardx
+36,Building Mobile Experiences,"['FrankBentley', 'EdBarrett']",comput scienc frankbentley edbarrett mitx
+37,Challenges of World Poverty,"['EstherDuflo', 'AbhijitBanerjee']",govern health and social scienc estherduflo abhijitbanerje mitx
+38,Introduction to Probability: The Science of Uncertainty,['JohnTsitsiklis'],scienc technolog engin and mathemat johntsitsikli mitx
+39,Cosmopolitan Tang: Aristocratic Culture,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+40,Global Warming Science,['KerryEmanuel'],scienc technolog engin and mathemat kerryemanuel mitx
+41,Introduction to Computer Science and Programming,"['EricGrimson', 'JohnGuttag']",comput scienc ericgrimson johnguttag mitx
+42,Global Health: Case Studies from a Biosocial Perspective,"['ArthurKleinman', 'PaulFarmer', 'SalmaanKeshavjee', 'AnneBecker']",govern health and social scienc arthurkleinman paulfarm salmaankeshavje annebeck harvardx
+43,The Analytics Edge,['DimitrisBertsimas'],govern health and social scienc dimitrisbertsima mitx
+44,Flight Vehicle Aerodynamics,['MarkDrela'],scienc technolog engin and mathemat markdrela mitx
+45,Introduction to Computational Thinking and Data Science,"['EricGrimson', 'JohnGuttag']",comput scienc ericgrimson johnguttag mitx
+46,Unlocking the Immunity to Change,"['RobertKegan', 'LisaLahey']",human histori design religion and educ robertkegan lisalahey harvardx
+47,Entrepreneurship 101: Who Is Your Customer?,['BillAulet'],govern health and social scienc billaulet mitx
+48,A New National Culture,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+49,HarvardX for Alumni: Explorations in Learning,['RobLue'],human histori design religion and educ roblu harvardx
+50,Innovating in Health Care,"['ReginaHerzlinger', 'MargoSelzer']",govern health and social scienc reginaherzling margoselz harvardx
+51,Evaluating Social Programs,"['RachelGlennerster', 'MarcShotland']",govern health and social scienc rachelglennerst marcshotland mitx
+52,Data Analysis for Genomics,['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+53,United States Health Policy,['JohnMcDonough'],govern health and social scienc johnmcdonough harvardx
+54,Justice,['MichaelSandel'],human histori design religion and educ michaelsandel harvardx
+55,Street Fighting Math,"['SanjoyMahajan', 'IsaacChuang']",scienc technolog engin and mathemat sanjoymahajan isaacchuang mitx
+56,From Global Empire to Global Economy,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+57,Big Data and Social Physics,['SandyPentland'],govern health and social scienc sandypentland mitx
+58,Introduction to Solid State Chemistry,['MichaelCima'],scienc technolog engin and mathemat michaelcima mitx
+59,The Last Empire,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+60,Mechanics Review,['DavidPritchard'],scienc technolog engin and mathemat davidpritchard mitx
+61,Tangible Things,['LaurelUlrich'],human histori design religion and educ laurelulrich harvardx
+62,Elements of Structures,['SimonaSocrate'],scienc technolog engin and mathemat simonasocr mitx
+63,Introduction to Computer Science and Programming,"['EricGrimson', 'JohnGuttag']",comput scienc ericgrimson johnguttag mitx
+64,Quantitative Biology Workshop,['MarryEllenWiltrout'],scienc technolog engin and mathemat marryellenwiltrout mitx
+65,Introduction to Biology: Secret of Life,['EricLander'],scienc technolog engin and mathemat ericland mitx
+66,Introduction to Biology: Secret of Life,['EricLander'],scienc technolog engin and mathemat ericland mitx
+67,Leaders of Learning,['RichardElmore'],human histori design religion and educ richardelmor harvardx
+68,Circuits and Electronics,"['AnantAgarwal', 'GeraldSussman', 'PiotrMitros', 'ChrisTerman', 'BonnieLam']",scienc technolog engin and mathemat anantagarw geraldsussman piotrmitro christerman bonnielam mitx
+69,Introduction to Computer Science and Programming,['EricGrimson'],comput scienc ericgrimson mitx
+70,The Ancient Greek Hero in 24 Hours (Hours 1-5): Epic and Lyric,['GregoryNagy'],human histori design religion and educ gregorynagi harvardx
+71,"Visualizing Japan (1850s-1930s): Westernization, Protest, Modernity",['JohnW.Dower'],human histori design religion and educ johnw.dow harvardx
+72,Mechanical Behavior of Materials,['LornaJ.Gibson'],scienc technolog engin and mathemat lornaj.gibson mitx
+73,Introduction to Solid State Chemistry,['MichaelCima'],scienc technolog engin and mathemat michaelcima mitx
+74,"Invasions, Rebellions, and the end of Imperial China","['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+75,"Saving Schools: History, Politics, and Policy of U.S. Education – History and Politics in U.S. Education",['PaulPeterson'],human histori design religion and educ paulpeterson harvardx
+76,Poetry in America: The Poetry of Early New England,['ElisaNew'],human histori design religion and educ elisanew harvardx
+77,The Ancient Greek Hero in 24 Hours (Hours 6-11): Signs of the Hero in Epic and Iconography,['GregoryNagy'],human histori design religion and educ gregorynagi harvardx
+78,Unlocking the Immunity to Change: A New Approach to Personal Improvement,"['RobertKegan(Bob)', 'LisaLahey']",human histori design religion and educ robertkegan(bob) lisalahey harvardx
+79,Improving Global Health: Focusing on Quality and Safety,['AshishK.Jha'],govern health and social scienc ashishk.jha harvardx
+80,Effective Field Theory,['IainStewart'],scienc technolog engin and mathemat iainstewart mitx
+81,A Global History of Architecture,['MarkJarzombek'],human histori design religion and educ markjarzombek mitx
+82,AnatomyX: Musculoskeletal Cases,['TrudyVanHouten'],scienc technolog engin and mathemat trudyvanhouten harvardx
+83,Supply Chain and Logistics Fundamentals,['ChrisCaplice'],govern health and social scienc chriscaplic mitx
+84,"Introduction to Philosophy: God, Knowledge and Consciousness",['CasparHare'],human histori design religion and educ casparhar mitx
+85,Evaluating Social Programs,['RachelGlennerster'],govern health and social scienc rachelglennerst mitx
+86,Underactuated Robotics,['RussTedrake'],scienc technolog engin and mathemat russtedrak mitx
+87,The Ancient Greek Hero in 24 Hours (Hours 12-15): Cult of Heroes,['GregoryNagy'],human histori design religion and educ gregorynagi harvardx
+88,Design and Development of Educational Technology,['EricKlopfer'],human histori design religion and educ ericklopf mitx
+89,Creating China: The Birth of a Nation,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+90,Introduction to Computational Thinking and Data Science,['EricGrimson'],comput scienc ericgrimson mitx
+91,The Ancient Greek Hero in 24 Hours (Hours 16-21): The Hero in Tragedy,['GregoryNagy'],human histori design religion and educ gregorynagi harvardx
+92,"Poetry in America: Nature and Nation, American Poetry, 1700-1850",['ElisaNew'],human histori design religion and educ elisanew harvardx
+93,Introduction to Game Design,['EricKlopfer'],human histori design religion and educ ericklopf mitx
+94,"Saving Schools: History, Politics, and Policy in U.S. Education – Teacher Policies",['PaulPeterson'],human histori design religion and educ paulpeterson harvardx
+95,Entrepreneurship and Healthcare in Emerging Economies,['TarunKhanna'],govern health and social scienc tarunkhanna harvardx
+96,The Ancient Greek Hero: Plato and Beyond,['GregoryNagy'],human histori design religion and educ gregorynagi harvardx
+97,"Light, Spike, and Sight: The Neuroscience of Vision",['SebastianSeung'],scienc technolog engin and mathemat sebastianseung mitx
+98,Communist Liberations,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+99,Introduction to Computer Science,['DavidMalan'],comput scienc davidmalan harvardx
+100,"Greater China Today: The People's Republic, Taiwan, and Hong Kong","['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+101,"Saving Schools: History, Politics, and Policy of U.S. Education – Accountability and National Standards",['PaulPeterson'],human histori design religion and educ paulpeterson harvardx
+102,Poetry in America: Walt Whitman,['ElisaNew'],human histori design religion and educ elisanew harvardx
+103,Introduction to Computer Science and Programming Using Python,"['EricGrimson', 'JohnGuttag']",comput scienc ericgrimson johnguttag mitx
+104,"Transforming Business, Society, and Self",['OttoScharmer'],govern health and social scienc ottoscharm mitx
+105,ContractsX: From Trust to Promise to Contract,['CharlesFried'],govern health and social scienc charlesfri harvardx
+106,Advanced Introductory Classical Mechanics,['DavidE.Pritchard'],scienc technolog engin and mathemat davide.pritchard mitx
+107,Entrepreneurship 101: Who Is Your Customer?,['BillAulet'],govern health and social scienc billaulet mitx
+108,Entrepreneurship 102: What Can You Do For Your Customer?,['BillAulet'],govern health and social scienc billaulet mitx
+109,Quantitative Biology Workshop,['Collaborative'],scienc technolog engin and mathemat collabor mitx
+110,Innovation and Commercialization,['EugeneFitzgerald'],govern health and social scienc eugenefitzgerald mitx
+111,Data Analysis for Genomics: Statistics and R for the Life Sciences,['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+112,Circuits and Electronics,['AnantAgarwal'],scienc technolog engin and mathemat anantagarw mitx
+113,Building Mobile Experiences,"['FrankBentley', 'EdBarrett']",comput scienc frankbentley edbarrett mitx
+114,The Challenges of Global Poverty,"['Duflo', 'Banerjee']",govern health and social scienc duflo banerje mitx
+115,Introduction to Probability: The Science of Uncertainty,"['JohnTsitsiklis', 'PatrickJailet', 'DimitriBertsekas']",scienc technolog engin and mathemat johntsitsikli patrickjailet dimitribertseka mitx
+116,Discrete-Time Signal Processing,"['Oppenheim', 'Baran']",scienc technolog engin and mathemat oppenheim baran mitx
+117,"Saving Schools: History, Politics, and Policy in U.S. Education",['PaulPeterson'],human histori design religion and educ paulpeterson harvardx
+118,Super-Earths and Life,['DimitarSasselov'],scienc technolog engin and mathemat dimitarsasselov harvardx
+119,"Symmetry, Structure and Tensor Properties of Materials",['EugeneFitzgerald'],scienc technolog engin and mathemat eugenefitzgerald mitx
+120,Mastering Quantum Mechanics,['BartonZwiebach'],scienc technolog engin and mathemat bartonzwiebach mitx
+121,The Einstein Revolution,['PeterGalison'],human histori design religion and educ petergalison harvardx
+122,"Central Challenges in American National Security, Strategy and the Press","['GrahamAllison', 'DavidSanger']",govern health and social scienc grahamallison davidsang harvardx
+123,Introduction to Linear Models and Matrix Algebra,['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+124,Introduction to Solid State Chemistry,['MichaelCima'],scienc technolog engin and mathemat michaelcima mitx
+125,Advanced Statistics for the Life Sciences,['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+126,Computation Structures: Digital Circuits,"['ChrisTerman', 'SteveWard', 'SilvinaHanonoWachman']",comput scienc christerman steveward silvinahanonowachman mitx
+127,The Analytics Edge,"['DimitrisBertsimas', ""AllisonO'Hair""]",govern health and social scienc dimitrisbertsima allisono'hair mitx
+128,Introduction to Aerospace Engineering: Astronautics and Human Spaceflight,['JeffreyHoffman'],scienc technolog engin and mathemat jeffreyhoffman mitx
+129,Introduction to Computational Thinking and Data Science,['EricGrimson'],comput scienc ericgrimson mitx
+130,JuryX: Deliberations for Social Change,['CharlesNesson'],govern health and social scienc charlesnesson harvardx
+131,Molecular Biology: DNA Replication and Repair,"['StephenBell', 'TaniaBaker']",scienc technolog engin and mathemat stephenbel taniabak mitx
+132,Poetry in America: Emily Dickinson,['ElisaNew'],human histori design religion and educ elisanew harvardx
+133,The American Dream for the Next Generation,['ThomasKochan'],govern health and social scienc thomaskochan mitx
+134,Introduction to Bioconductor,['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+135,Entrepreneurship 101: Who Is Your Customer?,['BillAulet'],govern health and social scienc billaulet mitx
+136,Design and Development of Games for Learning,['EricKlopfer'],human histori design religion and educ ericklopf mitx
+137,Evaluating Social Programs,"['RachelGlennerster', 'MarcShotland']",govern health and social scienc rachelglennerst marcshotland mitx
+138,"Electrical, Optical and Magnetic Materials and Devices",['CarolineRoss'],scienc technolog engin and mathemat carolineross mitx
+139,"Data Analysis for Genomics: Case Study, RNA Sequence Data Analysis",['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+140,"Data Analysis for Genomics: Case study, Variant Discovery and Genotyping",['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+141,"Data Analysis for Genomics: Case study, ChIP Sequence Data Analysis",['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+142,"Data Analysis for Genomics: Case study, DNA Methylation Data Analysis",['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+143,Entrepreneurship 102: What Can You Do For Your Customer?,['BillAulet'],govern health and social scienc billaulet mitx
+144,Innovating in Health Care,"['ReginaHerzlinger', 'MargoSelzer']",govern health and social scienc reginaherzling margoselz harvardx
+145,Poetry in America: The Civil War and Its Aftermath,['ElisaNew'],human histori design religion and educ elisanew harvardx
+146,Introduction to Data Wise: A Collaborative Process to Improve Learning and Teaching,['KathrynParkerBoudett'],human histori design religion and educ kathrynparkerboudett harvardx
+147,Supply Chain and Logistics Fundamentals,['ChrisCaplice'],govern health and social scienc chriscaplic mitx
+148,Advanced Introductory Classical Mechanics,['DavidE.Pritchard'],scienc technolog engin and mathemat davide.pritchard mitx
+149,User Innovation: A Path to Entrepreneurship,['EricvonHippel'],govern health and social scienc ericvonhippel mitx
+150,Calculus: Differentiation,['DavidJerison'],scienc technolog engin and mathemat davidjerison mitx
+151,The Analytics Edge,"['DimitrisBertsimas', ""AllisonO'Hair""]",govern health and social scienc dimitrisbertsima allisono'hair mitx
+152,Paradox and Infinity,['AugustinRayo'],human histori design religion and educ augustinrayo mitx
+153,Introduction to Computer Science and Programming,"['EricGrimson', 'JohnGuttag']",comput scienc ericgrimson johnguttag mitx
+154,Making Science and Engineering Pictures: A Practical Guide to Presenting Your Work,['FeliceFrankel'],scienc technolog engin and mathemat felicefrankel mitx
+155,Principles of Biochemistry,"['AlainViel', 'RachelleGaudet']",scienc technolog engin and mathemat alainviel rachellegaudet harvardx
+156,Science and Cooking: From Haute Cuisine to Soft Matter Science,['MichaelBrenner'],scienc technolog engin and mathemat michaelbrenn harvardx
+157,Making Biologic Medicines for Patients: The Principles of Biopharmaceutical Manufacturing,"['J.ChristopherLove', 'AnthonyJ.Sinskey', 'StacySprings']",govern health and social scienc j.christopherlov anthonyj.sinskey stacyspr mitx
+158,Implementation and Evaluation of Educational Technology,['EricKlopfer'],human histori design religion and educ ericklopf mitx
+159,Molecular Biology: DNA Replication and Repair,"['StephenP.Bell', 'TaniaA.Baker', 'MaryEllenWiltrout', 'NathanielSchafheimer', 'SeraThornton']",scienc technolog engin and mathemat stephenp.bel taniaa.bak maryellenwiltrout nathanielschafheim serathornton mitx
+160,Tangible Things,['LaurelUlrich'],human histori design religion and educ laurelulrich harvardx
+161,Introduction to Computer Science and Programming Using Python,"['EricGrimson', 'JohnGuttag', 'AnaBell']",comput scienc ericgrimson johnguttag anabel mitx
+162,Computation Structures: Digital Circuits,"['ChrisTerman', 'SteveWard', 'SilvinaWachman']",comput scienc christerman steveward silvinawachman mitx
+163,Introduction to American Government,['ThomasPatterson'],govern health and social scienc thomaspatterson harvardx
+164,Introduction to Solid State Chemistry,['MichaelCima'],scienc technolog engin and mathemat michaelcima mitx
+165,Mechanical Behavior of Materials: Linear Elastic Behavior,['LornaJ.Gibson'],scienc technolog engin and mathemat lornaj.gibson mitx
+166,"Transforming Business, Society, and Self",['OttoScharmer'],govern health and social scienc ottoscharm mitx
+167,"Visualizing Japan (1850s-1930s): Westernization, Protest, Modernity","['AndrewGordon', 'JohnDower', 'ShigeruMiyagawa']",human histori design religion and educ andrewgordon johndow shigerumiyagawa harvardx
+168,History of the Book: Making and Meaning in the Medieval Manuscript,"['JeffreyHamburger', 'BillStoneman']",human histori design religion and educ jeffreyhamburg billstoneman harvardx
+169,History of the Book: Scrolls in the Age of the Book,['TomKelly'],human histori design religion and educ tomkelli harvardx
+170,"History of the Book: Print and Manuscript in Western Europe, Asia and the Middle East (1450-1650)",['AnnBlair'],human histori design religion and educ annblair harvardx
+171,History of the Book: The History of the Book in the 17th and 18th Century Europe,['RobertDarnton'],human histori design religion and educ robertdarnton harvardx
+172,History of the Book: Book Sleuthing: What 19th-Century Books Can Tell Us About the Rise of the Reading Public,['LeahPrice'],human histori design religion and educ leahpric harvardx
+173,"History of the Book: Monasteries, Schools, and Notaries, Part 1: Reading the Late Medieval Marseille Archive",['DanSmail'],human histori design religion and educ dansmail harvardx
+174,"History of the Book: Monasteries, Schools, and Notaries, Part 2: Introduction to the Transitional Gothic Script",['BeverlyKienzle'],human histori design religion and educ beverlykienzl harvardx
+175,History of the Book: The Medieval Book of Hours: Art and Devotion in the Later Middle Ages,"['JeffreyHamburger', 'BillStoneman']",human histori design religion and educ jeffreyhamburg billstoneman harvardx
+176,History of the Book: Books in the Medieval Liturgy,['TomKelly'],human histori design religion and educ tomkelli harvardx
+177,Foundations of Development Policy: Advanced Development Economics,"['AbhijitVinayakBanerjee', 'EstherDuflo', 'BenjaminOlken']",govern health and social scienc abhijitvinayakbanerje estherduflo benjaminolken mitx
+178,Atomic and Optical Physics: Resonance,"['WolfgangKetterle', 'DavidE.Pritchard', 'IsaacChuang']",scienc technolog engin and mathemat wolfgangketterl davide.pritchard isaacchuang mitx
+179,A Global History of Architecture,['MarkJarzombek'],human histori design religion and educ markjarzombek mitx
+180,Introduction to Aerodynamics,['DavidL.Darmofal'],scienc technolog engin and mathemat davidl.darmof mitx
+181,Circuits and Electronics: Basic Circuit Analysis,"['AnantAgarwal', 'GeraldSussman', 'PiotrMitros', 'ChrisTerman', 'BonnieLam']",scienc technolog engin and mathemat anantagarw geraldsussman piotrmitro christerman bonnielam mitx
+182,"Circuits and Electronics: Amplification, Speed, and Delay","['AnantAgarwal', 'GeraldSussman', 'PiotrMitros', 'ChrisTerman', 'BonnieLam']",scienc technolog engin and mathemat anantagarw geraldsussman piotrmitro christerman bonnielam mitx
+183,Circuits and Electronics: Applications,"['AnantAgarwal', 'GeraldSussman', 'PiotrMitros', 'ChrisTerman', 'BonnieLam']",scienc technolog engin and mathemat anantagarw geraldsussman piotrmitro christerman bonnielam mitx
+184,Supply Chain Design,"['ChrisCaplice', 'YossiSheffi', 'JamesBlayneyRiceJr.', 'JarrodGoentzel']",govern health and social scienc chriscaplic yossisheffi jamesblayneyricejr. jarrodgoentzel mitx
+185,"Saving Schools: History, Politics, and Policy of U.S. Education – History and Politics in U.S. Education",['PaulPeterson'],human histori design religion and educ paulpeterson harvardx
+186,"Saving Schools: History, Politics, and Policy of U.S. Education – Teacher Policies",['PaulPeterson'],human histori design religion and educ paulpeterson harvardx
+187,"Saving Schools: History, Politics, and Policy of U.S. Education – Accountability and National Standards",['PaulPeterson'],human histori design religion and educ paulpeterson harvardx
+188,"Saving Schools: History, Politics, and Policy of U.S. Education – School Choice",['PaulPeterson'],human histori design religion and educ paulpeterson harvardx
+189,Justice,['MichaelSandel'],human histori design religion and educ michaelsandel harvardx
+190,Underactuated Robotics,"['RussTedrake', 'RobinDeits', 'TwanKoolen']",scienc technolog engin and mathemat russtedrak robindeit twankoolen mitx
+191,Principles of Synthetic Biology,"['AdamArkin', 'RonWeiss']",scienc technolog engin and mathemat adamarkin ronweiss mitx
+192,Evaluating Social Programs,"['RachelGlennerster', 'MarcShotland']",govern health and social scienc rachelglennerst marcshotland mitx
+193,Super-Earths and Life,['DimitarSasselov'],scienc technolog engin and mathemat dimitarsasselov harvardx
+194,"Mechanical Behavior of Materials: Stress Transformations, Beams, Columns, and Cellular Solids",['LornaJ.Gibson'],scienc technolog engin and mathemat lornaj.gibson mitx
+195,Data Analysis for Genomics: Statistics and R,['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+196,Atomic and Optical Physics: Atomic structure and atoms in external field,"['WolfgangKetterle', 'DavidE.Pritchard', 'IsaacChuang']",scienc technolog engin and mathemat wolfgangketterl davide.pritchard isaacchuang mitx
+197,Introduction to Computational Thinking and Data Science,"['EricGrimson', 'JohnGuttag', 'AnaBell']",comput scienc ericgrimson johnguttag anabel mitx
+198,Political and Intellectual Foundations: From the Sage Kings to Confucius and the Legalists,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+199,The Creation and End of Centralized Empire,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+200,Cosmopolitan Tang: Aristocratic Culture,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+201,Literati China: Examinations and Neo-Confucianism,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+202,From a Global Empire under the Mongols to a Global Economy under the Ming Dynasty,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+203,Making Biologic Medicines for Patients: The Principles of Biopharmaceutical Manufacturing,"['J.ChristopherLove', 'AnthonyJ.Sinskey', 'Dr.StacyL.Springs', 'Dr.PaulW.Barone', 'BetsySkrip', 'NicholasMozdzierz', 'EricMiller']",govern health and social scienc j.christopherlov anthonyj.sinskey dr.stacyl.spr dr.paulw.baron betsyskrip nicholasmozdzierz ericmil mitx
+204,Molecular Biology: Transcription and Transposition,"['StephenP.Bell', 'TaniaA.Baker', 'MaryEllenWiltrout', 'NathanielSchafheimer', 'SeraThornton']",scienc technolog engin and mathemat stephenp.bel taniaa.bak maryellenwiltrout nathanielschafheim serathornton mitx
+205,"Greater China Today: The People's Republic, Taiwan, and Hong Kong","['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+206,The Manchus and the Qing Dynasty,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+207,"Invasions, Rebellions and the Fall of Imperial China","['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+208,Creating Modern China: The Birth of a Nation,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+209,China and Communism,"['PeterBol', 'BillKirby']",human histori design religion and educ peterbol billkirbi harvardx
+210,"Visualizing Japan (1850s-1930s): Westernization, Protest, Modernity","['AndrewGordon', 'JohnDower', 'ShigeruMiyagawa']",human histori design religion and educ andrewgordon johndow shigerumiyagawa harvardx
+211,Mechanical Behavior of Materials: Time Dependent Behavior and Failure,['LornaJ.Gibson'],scienc technolog engin and mathemat lornaj.gibson mitx
+212,Data Analysis for Genomics: Matrix Algebra and Linear Models,['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+213,First Nights: Handel’s Messiah and Baroque Oratorio,['TomKelly'],human histori design religion and educ tomkelli harvardx
+214,Atomic and Optical Physics: Atom-Light Interactions 1 -- Matrix elements and quantized field,"['WolfgangKetterle', 'DavidE.Pritchard', 'IsaacChuang']",scienc technolog engin and mathemat wolfgangketterl davide.pritchard isaacchuang mitx
+215,Computation Structures: Computer Architecture,"['ChrisTerman', 'SteveWard', 'SilvinaHanonoWachman']",comput scienc christerman steveward silvinahanonowachman mitx
+216,Philosophy: Minds and Machines,['AlexByrne'],human histori design religion and educ alexbyrn mitx
+217,Calculus: Integration,['DavidJerison'],scienc technolog engin and mathemat davidjerison mitx
+218,Lessons from Ebola: Preventing the Next Pandemic,['AshishJha'],govern health and social scienc ashishjha harvardx
+219,Atomic and Optical Physics: Atom-Light Interactions 2: Line Broadening and Two-Photon Transitions,"['WolfgangKetterle', 'DavidE.Pritchard', 'IsaacChuang']",scienc technolog engin and mathemat wolfgangketterl davide.pritchard isaacchuang mitx
+220,Data Analysis for Genomics: Statistical Inference and Modeling for High-throughput Experiments,['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+222,Introduction to Feedback Control Theory,"['JacobWhite', 'JoeSteinmeyer']",scienc technolog engin and mathemat jacobwhit joesteinmey mitx
+223,Contracts Law: From Trust to Promise to Contract,['CharlesFried'],govern health and social scienc charlesfri harvardx
+224,Advanced Introductory Classical Mechanics,"['DavidE.Pritchard', 'ChrisChudzicki', 'ZhongzhouChen']",scienc technolog engin and mathemat davide.pritchard chrischudzicki zhongzhouchen mitx
+225,Introduction to Computer Science and Programming Using Python,"['EricGrimson', 'JohnGuttag', 'AnaBell']",comput scienc ericgrimson johnguttag anabel mitx
+226,Data Analysis for Genomics: Introduction to High-Dimensional Data Analysis,['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+227,Atomic and Optical Physics: Coherence,"['WolfgangKetterle', 'DavidE.Pritchard', 'IsaacChuang']",scienc technolog engin and mathemat wolfgangketterl davide.pritchard isaacchuang mitx
+228,Practical Improvement Science in Health Care: A Roadmap for Getting Results,"['DonGoldmann', 'DaveWilliams', 'DonBerwick']",govern health and social scienc dongoldmann davewilliam donberwick harvardx
+229,First Nights: Beethoven's 9th Symphony,['TomKelly'],human histori design religion and educ tomkelli harvardx
+230,Readings in Global Health,['DavidHunter'],govern health and social scienc davidhunt harvardx
+231,Becoming an Entrepreneur,['LaurieStach'],govern health and social scienc lauriestach mitx
+232,"Cellular Solids: Structures, Properties and Engineering Applications",['LornaJ.Gibson'],scienc technolog engin and mathemat lornaj.gibson mitx
+233,Design and Development of Educational Technology,"['EricKlopfer', 'ScotOsterweil', 'JudyPerry']",human histori design religion and educ ericklopf scotosterweil judyperri mitx
+234,Mobile Application Experiences: From a Domain to an App Idea,"['FrankBentley', 'EdBarrett']",comput scienc frankbentley edbarrett mitx
+235,Introduction to Probability: The Science of Uncertainty,"['JohnTsitsiklis', 'PatrickJaillet', 'AliaaAtwi', 'DimitriBertsekas', 'QingHe', 'JimmyLi', 'JagdishRamakrishnan', 'KatieSzeto', 'KuangXu']",scienc technolog engin and mathemat johntsitsikli patrickjaillet aliaaatwi dimitribertseka qingh jimmyli jagdishramakrishnan katieszeto kuangxu mitx
+236,Flight Vehicle Aerodynamics,"['MarkDrela', 'AlejandraUranga']",scienc technolog engin and mathemat markdrela alejandrauranga mitx
+237,Supply Chain and Logistics Fundamentals,['ChrisCaplice'],govern health and social scienc chriscaplic mitx
+238,Data Analysis for Genomics: Introduction to Bioconductor: Annotation and Analysis of Genomes and Genomic Assays,['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+239,The Einstein Revolution,['PeterGalison'],human histori design religion and educ petergalison harvardx
+240,Global Warming Science,"['KerryEmanuel', 'DanCziczo', 'DavidMcGee']",scienc technolog engin and mathemat kerryemanuel dancziczo davidmcge mitx
+241,Mastering Quantum Mechanics: Wave Mechanics,"['BartonZwiebach', 'SaifRayyan']",scienc technolog engin and mathemat bartonzwiebach saifrayyan mitx
+242,The Challenges of Global Poverty,"['EstherDuflo', 'AbhijitVinayakBanerjee']",govern health and social scienc estherduflo abhijitvinayakbanerje mitx
+243,Global Health Case Studies from a Biosocial Perspective,"['ArthurKleinman', 'PaulFarmer', 'SalmaanKeshavjee', 'AnneBecker']",govern health and social scienc arthurkleinman paulfarm salmaankeshavje annebeck harvardx
+244,Mobile Application Experiences: Mobile App Design,"['FrankBentley', 'EdBarrett']",comput scienc frankbentley edbarrett mitx
+245,"World Religions Through their Scriptures: Religious Literacy, Traditions and Scriptures",['DianeMoore'],human histori design religion and educ dianemoor harvardx
+246,Introduction to Computational Thinking and Data Science,"['EricGrimson', 'JohnGuttag', 'AnaBell']",comput scienc ericgrimson johnguttag anabel mitx
+247,Data Analysis for Genomics: High-performance Computing for Reproducible Genomics,['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+248,Contracts Law: From Trust to Promise to Contract,['CharlesFried'],govern health and social scienc charlesfri harvardx
+249,Mastering Quantum Mechanics: Quantum Dynamics,"['BartonZwiebach', 'SaifRayyan']",scienc technolog engin and mathemat bartonzwiebach saifrayyan mitx
+250,Mobile Application Experiences: Building Mobile Apps,"['FrankBentley', 'EdBarrett']",comput scienc frankbentley edbarrett mitx
+251,Shaping the Future of Work,"['ThomasKochan', 'GokceBasbug', 'MeryamBukari', 'ShahidAzad', 'KanikaAlmadi']",govern health and social scienc thomaskochan gokcebasbug meryambukari shahidazad kanikaalmadi mitx
+252,Calculus: Coordinate Systems and Infinite Series,['DavidJerison'],scienc technolog engin and mathemat davidjerison mitx
+253,Quantitative Biology Workshop,"['JeffGore', 'PaulBlainey', 'EricS.Lander', 'ErnestFraenkel', 'MaryEllenWiltrout', 'NathanielSchafheimer']",scienc technolog engin and mathemat jeffgor paulblainey erics.land ernestfraenkel maryellenwiltrout nathanielschafheim mitx
+254,World Religions Through their Scriptures: Christianity,['KarenKing'],human histori design religion and educ karenk harvardx
+255,Poetry in America: Modernism,['ElisaNew'],human histori design religion and educ elisanew harvardx
+256,Cellular Solids: Applications in Medicine,['LornaJ.Gibson'],scienc technolog engin and mathemat lornaj.gibson mitx
+257,The Analytics Edge,"['DimitrisBertsimas', ""AllisonO'Hair"", 'JohnSilberholz', 'IainDunning', 'AngieKing', 'VeliborMisic', 'NatalyYoussef', 'AlexWeinstein', 'JerryKung']",govern health and social scienc dimitrisbertsima allisono'hair johnsilberholz iaindun angiek velibormis natalyyoussef alexweinstein jerrykung mitx
+258,Data Analysis for Genomics: Case Studies in Functional Genomics,['RafaelIrizarry'],govern health and social scienc rafaelirizarri harvardx
+259,Introduction to Data Wise: A Collaborative Process to Improve Learning and Teaching,['KathrynParkerBoudett'],human histori design religion and educ kathrynparkerboudett harvardx
+260,Just Money: Banking as if Society Mattered,"['J.PhillipThompson', 'KatrinKaeufer', 'LilySteponaitis']",govern health and social scienc j.phillipthompson katrinkaeuf lilystepona mitx
+261,Mobile Application Experiences: Understanding Use,"['FrankBentley', 'EdBarrett']",comput scienc frankbentley edbarrett mitx
+262,Introduction to Game Design,"['EricKlopfer', 'PhilpTan', 'SaraVerrilli']",human histori design religion and educ ericklopf philptan saraverrilli mitx
+263,Mastering Quantum Mechanics: Entanglement and Angular Momentum,"['BartonZwiebach', 'SaifRayyan']",scienc technolog engin and mathemat bartonzwiebach saifrayyan mitx
+264,First Nights: L'Orfeo,['TomKelly'],human histori design religion and educ tomkelli harvardx
+265,Evaluating Social Programs,"['RachelGlennerster', 'MarcShotland']",govern health and social scienc rachelglennerst marcshotland mitx
+266,World Religions Through their Scriptures: Buddhism,['CharlesHallisey'],human histori design religion and educ charleshallisey harvardx
+267,Leaders of Learning,['RichardElmore'],human histori design religion and educ richardelmor harvardx
+268,Cellular Solids: Applications in Nature,['LornaJ.Gibson'],scienc technolog engin and mathemat lornaj.gibson mitx
+269,Supply Chain Design,"['ChrisCaplice', 'YossiSheffi', 'JarrodGoentzel', 'JamesBlayneyRiceJr.']",govern health and social scienc chriscaplic yossisheffi jarrodgoentzel jamesblayneyricejr. mitx
+270,Mobile Application Experiences: Reporting Research Findings,"['FrankBentley', 'EdBarrett']",comput scienc frankbentley edbarrett mitx
+271,Cell Biology: Mitochondria,['RobLue'],scienc technolog engin and mathemat roblu harvardx
+272,Electronic Materials and Devices,['CarolineRoss'],scienc technolog engin and mathemat carolineross mitx
+273,World Religions Through Their Scriptures: Islam,['AliAsani'],human histori design religion and educ aliasani harvardx
+274,Molecular Biology: DNA Replication and Repair,"['StephenP.Bell', 'TaniaA.Baker', 'MaryEllenWiltrout', 'NathanielSchafheimer', 'SeraThornton']",scienc technolog engin and mathemat stephenp.bel taniaa.bak maryellenwiltrout nathanielschafheim serathornton mitx
+275,Introduction to Computer Science and Programming,"['EricGrimson', 'JohnGuttag', 'AnaBell']",comput scienc ericgrimson johnguttag anabel mitx
+276,Energy Within Environmental Constraints,['DavidKeith'],scienc technolog engin and mathemat davidkeith harvardx
+277,Making Biologic Medicines for Patients: The Principles of Biopharmaceutical Manufacturing,"['J.ChristopherLove', 'AnthonyJ.Sinskey', 'Dr.StacyL.Springs', 'Dr.PaulW.Barone', 'BetsySkrip', 'NicholasMozdzierz', 'EricMiller']",govern health and social scienc j.christopherlov anthonyj.sinskey dr.stacyl.spr dr.paulw.baron betsyskrip nicholasmozdzierz ericmil mitx
+278,Elements of Structures,"['SimonaSocrate', 'AlexieM.Kolpak']",scienc technolog engin and mathemat simonasocr alexiem.kolpak mitx
+279,Becoming an Entrepreneur,['LaurieStach'],govern health and social scienc lauriestach mitx
+280,Circuits and Electronics: Basic Circuit Analysis,"['AnantAgarwal', 'GeraldSussman', 'PiotrMitros', 'ChrisTerman', 'BonnieLam']",scienc technolog engin and mathemat anantagarw geraldsussman piotrmitro christerman bonnielam mitx
+281,"Circuits and Electronics: Amplification, Speed, and Delay","['AnantAgarwal', 'GeraldSussman', 'PiotrMitros', 'ChrisTerman', 'BonnieLam']",scienc technolog engin and mathemat anantagarw geraldsussman piotrmitro christerman bonnielam mitx
+282,Optical Materials and Devices,['CarolineRoss'],scienc technolog engin and mathemat carolineross mitx
+283,World Religions Through their Scriptures: Hinduism,['NeelimaShukla-Bhatt'],human histori design religion and educ neelimashukla-bhatt harvardx
+284,Implementation and Evaluation of Educational Technology,"['EricKlopfer', 'ElizabethHuttner-Loan']",human histori design religion and educ ericklopf elizabethhuttner-loan mitx
+285,First Nights: Symphonie Fantastique,['TomKelly'],human histori design religion and educ tomkelli harvardx
+286,Introduction to Family Engagement in Education,['KarenMapp'],human histori design religion and educ karenmapp harvardx
+287,Introduction to Control System Design,"['JacobWhite', 'JoeSteinmeyer']",scienc technolog engin and mathemat jacobwhit joesteinmey mitx
+288,Introduction to State Space Control,"['JacobWhite', 'JoeSteinmeyer']",scienc technolog engin and mathemat jacobwhit joesteinmey mitx
+289,Magnetic Materials and Devices,['CarolineRoss'],scienc technolog engin and mathemat carolineross mitx
