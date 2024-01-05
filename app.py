@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, render_template, request, flash, redirect, url_for, get_flashed_messages
 from database import load_login_info, get_pass, register, get_post, store_post, finish_course, get_user_course
+from recommend import recommend
 
 app = Flask(__name__)
 
@@ -14,7 +15,10 @@ def loginpage():
 
 @app.route("/<username>")
 def home(username):
-  return render_template('homepage.html',username = username)
+  recent = get_user_course(username=username)
+  print(recent)
+  courses = recommend(recent)
+  return render_template('homepage.html',username = username, courses= courses, recent = recent)
 
 @app.route("/<username>/dashboard")
 def dashboard(username):
@@ -23,7 +27,6 @@ def dashboard(username):
 @app.route("/<username>/community")
 def community(username):
   data=get_post()
-  print(data)
   return render_template('community.html', username=username, data=data)
 
 @app.route("/<username>/community", methods=['post'])
@@ -88,10 +91,10 @@ def utilities(username):
 
 @app.route("/<username>/<course_name>")
 def course_page(username, course_name):
-  return render_template('coursepage.html', course_name=course_name)
+  return render_template('coursepage.html', username = username, course_name=course_name)
 def enrolled(username, course_name):
   finish_course(username=username, course_name=course_name)
-  return render_template('coursepage.html', msg="Finished Successfully")
+  return render_template('coursepage.html',username= username, msg="Finished Successfully", course_name=course_name)
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)

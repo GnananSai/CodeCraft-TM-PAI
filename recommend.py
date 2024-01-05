@@ -16,10 +16,11 @@ similarity= cosine_similarity(vectors)
 def recommend(course):
     course_index = new_df[new_df['Course Title'] == course].index[0]
     course_list = sorted(list(enumerate(similarity[course_index])), key=lambda x: x[1], reverse=True)[1:6]
+    clist=[]
     for i in course_list:
-       print(new_df.iloc[i[0]]["Course Title"])
+       clist.append(new_df.iloc[i[0]]["Course Title"])
+    return clist
        
 
-recommend("Classical Mechanics")
-    
+
 

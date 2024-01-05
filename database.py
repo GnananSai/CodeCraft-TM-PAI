@@ -80,8 +80,11 @@ def get_user_course(username):
     for row in result:
       dumb.append(row._mapping)
     try:
-      print (dumb[0].get('course_name'))
+      print(dumb[0].get('course_name'))
+      return (dumb[0].get('course_name'))
     except:
-      return None
+      return "Classical Mechanics"
+    
 
-get_user_course("admin")
+#finish_course("admin", "Circuits and Electronics")
+finish_course("admin1", "Intoduction to Control System Design")
