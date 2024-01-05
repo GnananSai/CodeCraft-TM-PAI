@@ -19,8 +19,23 @@
         height: 100px;
       }
       .dashboardHeader {
-        margin-top: 180px;
-        margin-left: 50px;
+        margin-top: 100px;
+        background-repeat: no-repeat;
+        background-size: cover; /* or background-size: contain; depending on your preference */
+        position: relative;
+      }
+      .bg-image-fluid {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      #person {
+        position: absolute;
+        top: 170px;
+        left: 70px;
+      }
+      #badges {
+        background-color: black;
       }
 
       @media only screen and (max-width: 600px) {
@@ -32,8 +47,7 @@
           margin-left: 3rem;
         }
         .dashboardHeader {
-          margin-top: 80px;
-          margin-left: 5px;
+          margin-top: 127px;
         }
       }
     </style>
@@ -72,7 +86,10 @@
           class="navbar navbar-custom navbar-dark navbar-expand-lg bg-black border-bottom border-body fixed-top"
         >
           <div class="container-fluid">
-            <a class="navbar-brand mx-3" href="{{url_for('home', username=username)}}">
+            <a
+              class="navbar-brand mx-3"
+              href="{{url_for('home', username=username)}}"
+            >
               <img
                 src="../static/reign_resized.png"
                 alt="Reign"
@@ -101,11 +118,17 @@
                 class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end"
               >
                 <li class="nav-item mx-md-2 mb-2 mb-md-0">
-                  <a class="nav-link" href="{{url_for('home', username=username)}}">Home</a>
+                  <a
+                    class="nav-link"
+                    href="{{url_for('home', username=username)}}"
+                    >Home</a
+                  >
                 </li>
 
                 <li class="nav-item mx-md-2 mb-2 mb-md-0">
-                  <a class="nav-link" href="{{url_for('ucourses', username=username)}}"
+                  <a
+                    class="nav-link"
+                    href="{{url_for('ucourses', username=username)}}"
                     >Courses</a
                   >
                 </li>
@@ -140,7 +163,11 @@
 
                       <ul class="dropdown-menu">
                         <li>
-                          <a class="dropdown-item" type="button" href="{{url_for('dashboard', username=username)}}">
+                          <a
+                            class="dropdown-item"
+                            type="button"
+                            href="{{url_for('dashboard', username=username)}}"
+                          >
                             Dashboard
                           </a>
                         </li>
@@ -150,30 +177,47 @@
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" type="button" href="http://localhost:8501" target="_blank">
+                          <a
+                            class="dropdown-item"
+                            type="button"
+                            href="http://localhost:8501"
+                            target="_blank"
+                          >
                             Chat Bot
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" type="button" href="{{url_for('community', username=username)}}">
+                          <a
+                            class="dropdown-item"
+                            type="button"
+                            href="{{url_for('community', username=username)}}"
+                          >
                             Community
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" type="button" href="{{url_for('ucourses', username=username)}}" target="_blank">
+                          <a
+                            class="dropdown-item"
+                            type="button"
+                            href="{{url_for('ucourses', username=username)}}"
+                            target="_blank"
+                          >
                             Focus Session
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" type="button" href="{{url_for('utilities', username=username)}}">
+                          <a
+                            class="dropdown-item"
+                            type="button"
+                            href="{{url_for('utilities', username=username)}}"
+                          >
                             Progress Tools
                           </a>
                         </li>
                       </ul>
                     </div>
                   </div>
-                  <a class="nav-link nav-name" href="#">
-                    {{username}}</a>
+                  <a class="nav-link nav-name" href="#"> {{username}}</a>
                 </li>
 
                 <li class="nav-item mx-md-2 mb-2 mb-md-0 d-md-block d-none">
@@ -189,7 +233,11 @@
 
                     <ul class="dropdown-menu dropdown-menu-md-end">
                       <li>
-                        <a class="dropdown-item" type="button" href="{{url_for('dashboard', username=username)}}">
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="{{url_for('dashboard', username=username)}}"
+                        >
                           Dashboard
                         </a>
                       </li>
@@ -199,22 +247,40 @@
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="http://localhost:8501" target="_blank">
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="http://localhost:8501"
+                          target="_blank"
+                        >
                           Chat Bot
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="{{url_for('community', username=username)}}">
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="{{url_for('community', username=username)}}"
+                        >
                           Community
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="{{url_for('focus', username=username)}}" target="_blank">
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="{{url_for('focus', username=username)}}"
+                          target="_blank"
+                        >
                           Focus Session
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="{{url_for('utilities', username=username)}}">
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="{{url_for('utilities', username=username)}}"
+                        >
                           Progress Tools
                         </a>
                       </li>
@@ -228,24 +294,23 @@
       </section>
 
       <!--Header-->
-      <section id="dashboardHeader">
-        <header
-          class="py-5 bg-image-fluid"
+      <section class="dashboardHeader">
+        <div
+          class="py-5 bg-image-fluid w-100"
           style="
             background-image: url('https://source.unsplash.com/light-blue-to-dark-blue-gradient-pJadQetzTkI');
           "
         >
-          <img id="person" src="ProfilePic.png" alt="Profile Picture" />
+          <!-- <img id="person" src="../static/person.png" alt="Profile Picture" /> -->
           <div class="text-start my-5 mx-5">
-            <h1 class="text-secondary fs-3 fw-bolder">
+            <h1 class="text-warning fs-3 fw-bolder">
               <i class="bi bi-calendar-week text-dark"></i> DASHBOARD
             </h1>
           </div>
-        </header>
+        </div>
         <div class="bg-altdark">
-          <div class="row justify-content-center py-4 px-5">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-8">
+          <div class="row justify-content-center py-4 mx-5 mt-5">
+            <div class="col-lg-10">
               <h5 class="text-primary">Username</h5>
               <p class="text-white">
                 Student at Manipal Institute Of Technology
@@ -261,16 +326,12 @@
       <!--Badges-->
       <section id="badges">
         <div>
-          <div class="row justify-content-center py-4 px-5">
-            <div class="col-lg-1"></div>
+          <div class="row py-4 mx-5">
             <div class="col-lg-9">
               <h2 class="text-white">My Badges</h2>
               <p class="text-white">
                 Showcase of all the unique badges collected
               </p>
-            </div>
-            <div class="col-lg-2">
-              <button class="btn btn-outline-secondary">All Badges</button>
             </div>
           </div>
 
@@ -279,9 +340,9 @@
             class="row my-3 ms-5 me-5 align-items-center justify-content-around"
           >
             <div class="col-1 col-lg-3 col-xl-3">
-              <div class="card border-secondary bg-black">
+              <div class="card border-warning bg-black">
                 <div class="card-body text-center py-4 text-white">
-                  <img src="Achievement1.png" />
+                  <img src="../static/Achievement1.png" />
                   <h4 class="card-title">Showstoppers</h4>
                   <p class="lead card-subtitle">Congrats</p>
                 </div>
@@ -289,9 +350,9 @@
             </div>
 
             <div class="col-1 col-lg-3 col-xl-3">
-              <div class="card border-secondary bg-black">
+              <div class="card border-warning bg-black">
                 <div class="card-body text-center py-4 text-white">
-                  <img src="Achievement2.png" />
+                  <img src="../static/Achievement2.png" />
                   <h4 class="card-title">Showstoppers</h4>
                   <p class="lead card-subtitle">Congrats</p>
                 </div>
@@ -299,9 +360,9 @@
             </div>
 
             <div class="col-1 col-lg-3 col-xl-3">
-              <div class="card border-secondary bg-black">
+              <div class="card border-warning bg-black">
                 <div class="card-body text-center py-4 text-white">
-                  <img src="Achievement3.png" />
+                  <img src="../static/Achievement3.png" />
                   <h4 class="card-title">Showstoppers</h4>
                   <p class="lead card-subtitle">Congrats</p>
                 </div>
@@ -309,9 +370,9 @@
             </div>
 
             <div class="col-1 col-lg-3 col-xl-3">
-              <div class="card border-secondary bg-black">
+              <div class="card border-warning bg-black">
                 <div class="card-body text-center py-4 text-white">
-                  <img src="Achievement1.png" />
+                  <img src="../static/Achievement1.png" />
                   <h4 class="card-title">Showstoppers</h4>
                   <p class="lead card-subtitle">Congrats</p>
                 </div>
@@ -323,9 +384,9 @@
             class="row my-5 ms-5 me-5 align-items-center justify-content-around"
           >
             <div class="col-1 col-lg-3 col-xl-3">
-              <div class="card border-secondary bg-black">
+              <div class="card border-warning bg-black">
                 <div class="card-body text-center py-4 text-white">
-                  <img src="Achievement1.png" />
+                  <img src="../static/Achievement1.png" />
                   <h4 class="card-title">Showstoppers</h4>
                   <p class="lead card-subtitle">Congrats</p>
                 </div>
@@ -333,9 +394,9 @@
             </div>
 
             <div class="col-1 col-lg-3 col-xl-3">
-              <div class="card border-secondary bg-black">
+              <div class="card border-warning bg-black">
                 <div class="card-body text-center py-4 text-white">
-                  <img src="Achievement2.png" />
+                  <img src="../static/Achievement2.png" />
                   <h4 class="card-title">Showstoppers</h4>
                   <p class="lead card-subtitle">Congrats</p>
                 </div>
@@ -343,9 +404,9 @@
             </div>
 
             <div class="col-1 col-lg-3 col-xl-3">
-              <div class="card border-secondary bg-black">
+              <div class="card border-warning bg-black">
                 <div class="card-body text-center py-4 text-white">
-                  <img src="Achievement3.png" />
+                  <img src="../static/Achievement3.png" />
                   <h4 class="card-title">Showstoppers</h4>
                   <p class="lead card-subtitle">Congrats</p>
                 </div>
@@ -353,9 +414,9 @@
             </div>
 
             <div class="col-1 col-lg-3 col-xl-3">
-              <div class="card border-secondary bg-black">
+              <div class="card border-warning bg-black">
                 <div class="card-body text-center py-4 text-white">
-                  <img src="Achievement1.png" />
+                  <img src="../static/Achievement1.png" />
                   <h4 class="card-title">Showstoppers</h4>
                   <p class="lead card-subtitle">Congrats</p>
                 </div>
