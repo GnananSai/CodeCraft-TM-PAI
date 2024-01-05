@@ -31,10 +31,11 @@ def community(username):
 
 @app.route("/<username>/community", methods=['post'])
 def posted(username):
-  data = request.form
-  post = data['post']
-  store_post(post)
-  return render_template('community.html', username=username , msg="Posted succesfully", post = post)
+  fufu = request.form
+  post = fufu['post']
+  store_post(username=username, content=post)
+  data= get_post()
+  return render_template('community.html', username=username , msg="Posted succesfully", post = post, data= data)
 
 @app.route("/<username>/focus-session")
 def focus(username):
