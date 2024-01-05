@@ -15,11 +15,41 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
     />
     <style>
+      *,
+      *:before,
+      *:after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .circular-progress {
+        position: relative;
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+      }
+      .circular-progress:before {
+        content: "";
+        position: absolute;
+        height: 84%;
+        width: 84%;
+        background-color: #ffffff;
+        border-radius: 50%;
+      }
+      .value-container {
+        position: relative;
+        font-family: "Poppins", sans-serif;
+        font-size: 50px;
+        color: black;
+      }
       .navbar-custom {
         height: 100px;
       }
 
-      .todo {
+      .utilities {
         margin-top: 180px;
         margin-left: 100px;
       }
@@ -52,7 +82,7 @@
           position: absolute;
           margin-left: 3rem;
         }
-        .todo {
+        .utilities {
           margin-top: 180px;
           margin-left: auto;
         }
@@ -77,7 +107,10 @@
           class="navbar navbar-custom navbar-dark navbar-expand-lg bg-black border-bottom border-body fixed-top"
         >
           <div class="container-fluid">
-            <a class="navbar-brand mx-3" href="{{url_for('home', username=username)}}">
+            <a
+              class="navbar-brand mx-3"
+              href="{{url_for('home', username=username)}}"
+            >
               <img
                 src="../static/reign_resized.png"
                 alt="Reign"
@@ -106,11 +139,17 @@
                 class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end"
               >
                 <li class="nav-item mx-md-2 mb-2 mb-md-0">
-                  <a class="nav-link" href="{{url_for('home', username=username)}}">Home</a>
+                  <a
+                    class="nav-link"
+                    href="{{url_for('home', username=username)}}"
+                    >Home</a
+                  >
                 </li>
 
                 <li class="nav-item mx-md-2 mb-2 mb-md-0">
-                  <a class="nav-link" href="{{url_for('ucourses', username=username)}}"
+                  <a
+                    class="nav-link"
+                    href="{{url_for('ucourses', username=username)}}"
                     >Courses</a
                   >
                 </li>
@@ -145,7 +184,11 @@
 
                       <ul class="dropdown-menu">
                         <li>
-                          <a class="dropdown-item" type="button" href="{{url_for('dashboard', username=username)}}">
+                          <a
+                            class="dropdown-item"
+                            type="button"
+                            href="{{url_for('dashboard', username=username)}}"
+                          >
                             Dashboard
                           </a>
                         </li>
@@ -155,30 +198,47 @@
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" type="button" href="http://localhost:8501" target="_blank">
+                          <a
+                            class="dropdown-item"
+                            type="button"
+                            href="http://localhost:8501"
+                            target="_blank"
+                          >
                             Chat Bot
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" type="button" href="{{url_for('community', username=username)}}">
+                          <a
+                            class="dropdown-item"
+                            type="button"
+                            href="{{url_for('community', username=username)}}"
+                          >
                             Community
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" type="button" href="{{url_for('focus', username=username)}}" target="_blank">
+                          <a
+                            class="dropdown-item"
+                            type="button"
+                            href="{{url_for('focus', username=username)}}"
+                            target="_blank"
+                          >
                             Focus Session
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" type="button" href="{{url_for('utilities', username=username)}}">
+                          <a
+                            class="dropdown-item"
+                            type="button"
+                            href="{{url_for('utilities', username=username)}}"
+                          >
                             Progress Tools
                           </a>
                         </li>
                       </ul>
                     </div>
                   </div>
-                  <a class="nav-link nav-name" href="#">
-                    {{username}}</a>
+                  <a class="nav-link nav-name" href="#"> {{username}}</a>
                 </li>
 
                 <li class="nav-item mx-md-2 mb-2 mb-md-0 d-md-block d-none">
@@ -194,7 +254,11 @@
 
                     <ul class="dropdown-menu dropdown-menu-md-end">
                       <li>
-                        <a class="dropdown-item" type="button" href="{{url_for('dashboard', username=username)}}">
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="{{url_for('dashboard', username=username)}}"
+                        >
                           Dashboard
                         </a>
                       </li>
@@ -204,22 +268,40 @@
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="http://localhost:8501" target="_blank">
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="http://localhost:8501"
+                          target="_blank"
+                        >
                           Chat Bot
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="{{url_for('community', username=username)}}">
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="{{url_for('community', username=username)}}"
+                        >
                           Community
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="{{url_for('focus', username=username)}}" target="_blank">
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="{{url_for('focus', username=username)}}"
+                          target="_blank"
+                        >
                           Focus Session
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="{{url_for('utilities', username=username)}}">
+                        <a
+                          class="dropdown-item"
+                          type="button"
+                          href="{{url_for('utilities', username=username)}}"
+                        >
                           Progress Tools
                         </a>
                       </li>
@@ -232,155 +314,187 @@
         </nav>
       </section>
 
-      <!-- TO-DO List -->
-      <section class="todo container-fluid d-flex flex-column">
-        <div class="d-flex flex-column">
-          <span class="text-warning fs-1 fw-bold mx-1">To-Do</span>
-          <div class="taskadd d-flex">
-            <small class="text-light">To Do (4)</small>
-            <div class="text-light">
-              <span>Add new task </span>
-              <i
-                class="bi bi-plus-lg text-light border border-light rounded-circle pointer-event"
-              ></i>
+      <section class="utilities d-flex pe-5 row">
+        <!-- TO-DO List -->
+        <div class="todo container-fluid d-flex flex-column col-md-6">
+          <div class="d-flex flex-column">
+            <span class="text-warning fs-1 fw-bold mx-1">To-Do</span>
+            <div class="taskadd d-flex">
+              <small class="text-light">To Do (4)</small>
+              <div class="text-light">
+                <span>Add new task </span>
+                <i
+                  class="bi bi-plus-lg text-light border border-light rounded-circle pointer-event"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div class="list-cards d-flex flex-column gap-3 mx-1">
+            <div class="card bg-dark text-white rounded-3">
+              <div class="card-body">
+                <h5 class="card-title">Design New UI Presentation</h5>
+                <h6 class="text-light-emphasis">Marketing Course</h6>
+                <div class="mb-2">
+                  <span class="text-light-emphasis">Progress</span>
+                  <span class="progress-2 text-light-emphasis">7/10</span>
+                </div>
+                <div
+                  class="progress mb-3"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="height: 5px"
+                >
+                  <div class="progress-bar" style="width: 25%"></div>
+                </div>
+
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span
+                    class="date rounded-pill border border-light-subtle text-light p-1 px-2"
+                  >
+                    01 Jan 2024
+                  </span>
+                  <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
+                  <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-dark text-white rounded-3">
+              <div class="card-body">
+                <h5 class="card-title">Design New UI Presentation</h5>
+                <h6 class="text-light-emphasis">Marketing Course</h6>
+                <div class="mb-2">
+                  <span class="text-light-emphasis">Progress</span>
+                  <span class="progress-2 text-light-emphasis">7/10</span>
+                </div>
+                <div
+                  class="progress mb-3"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="height: 5px"
+                >
+                  <div class="progress-bar" style="width: 25%"></div>
+                </div>
+
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span
+                    class="date rounded-pill border border-light-subtle text-light p-1 px-2"
+                  >
+                    01 Jan 2024
+                  </span>
+                  <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
+                  <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-dark text-white rounded-3">
+              <div class="card-body">
+                <h5 class="card-title">Design New UI Presentation</h5>
+                <h6 class="text-light-emphasis">Marketing Course</h6>
+                <div class="mb-2">
+                  <span class="text-light-emphasis">Progress</span>
+                  <span class="progress-2 text-light-emphasis">7/10</span>
+                </div>
+                <div
+                  class="progress mb-3"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="height: 5px"
+                >
+                  <div class="progress-bar" style="width: 25%"></div>
+                </div>
+
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span
+                    class="date rounded-pill border border-light-subtle text-light p-1 px-2"
+                  >
+                    01 Jan 2024
+                  </span>
+                  <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
+                  <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-dark text-white rounded-3">
+              <div class="card-body">
+                <h5 class="card-title">Design New UI Presentation</h5>
+                <h6 class="text-light-emphasis">Marketing Course</h6>
+                <div class="mb-2">
+                  <span class="text-light-emphasis">Progress</span>
+                  <span class="progress-2 text-light-emphasis">7/10</span>
+                </div>
+                <div
+                  class="progress mb-3"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="height: 5px"
+                >
+                  <div class="progress-bar" style="width: 25%"></div>
+                </div>
+
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span
+                    class="date rounded-pill border border-light-subtle text-light p-1 px-2"
+                  >
+                    01 Jan 2024
+                  </span>
+                  <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
+                  <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="list-cards d-flex flex-column gap-3 mx-1">
-          <div class="card bg-dark text-white rounded-3">
-            <div class="card-body">
-              <h5 class="card-title">Design New UI Presentation</h5>
-              <h6 class="text-light-emphasis">Marketing Course</h6>
-              <div class="mb-2">
-                <span class="text-light-emphasis">Progress</span>
-                <span class="progress-2 text-light-emphasis">7/10</span>
-              </div>
-              <div
-                class="progress mb-3"
-                role="progressbar"
-                aria-label="Basic example"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="height: 5px"
-              >
-                <div class="progress-bar" style="width: 25%"></div>
-              </div>
 
-              <div
-                class="d-flex justify-content-between align-items-center mb-2"
-              >
-                <span
-                  class="date rounded-pill border border-light-subtle text-light p-1 px-2"
-                >
-                  01 Jan 2024
-                </span>
-                <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
-                <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
+        <!-- Daily Report -->
+
+        <div class="d-flex flex-column align-items-center col-md-6 gap-5">
+          <h1 class="text-warning">Daily Report</h1>
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="ms-5 me-2">
+              <h5 class="text-primary">Yesterday</h5>
+              <h1 class="text-warning mx-4">4</h1>
+              <h5 class="text-primary mx-3">Hours</h5>
+            </div>
+
+            <div class="mx-5">
+              <div class="circular-progress" data-progress-end-value="80">
+                <div class="value-container">0%</div>
               </div>
             </div>
-          </div>
-          <div class="card bg-dark text-white rounded-3">
-            <div class="card-body">
-              <h5 class="card-title">Design New UI Presentation</h5>
-              <h6 class="text-light-emphasis">Marketing Course</h6>
-              <div class="mb-2">
-                <span class="text-light-emphasis">Progress</span>
-                <span class="progress-2 text-light-emphasis">7/10</span>
-              </div>
-              <div
-                class="progress mb-3"
-                role="progressbar"
-                aria-label="Basic example"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="height: 5px"
-              >
-                <div class="progress-bar" style="width: 25%"></div>
-              </div>
 
-              <div
-                class="d-flex justify-content-between align-items-center mb-2"
-              >
-                <span
-                  class="date rounded-pill border border-light-subtle text-light p-1 px-2"
-                >
-                  01 Jan 2024
-                </span>
-                <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
-                <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
-              </div>
-            </div>
-          </div>
-          <div class="card bg-dark text-white rounded-3">
-            <div class="card-body">
-              <h5 class="card-title">Design New UI Presentation</h5>
-              <h6 class="text-light-emphasis">Marketing Course</h6>
-              <div class="mb-2">
-                <span class="text-light-emphasis">Progress</span>
-                <span class="progress-2 text-light-emphasis">7/10</span>
-              </div>
-              <div
-                class="progress mb-3"
-                role="progressbar"
-                aria-label="Basic example"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="height: 5px"
-              >
-                <div class="progress-bar" style="width: 25%"></div>
-              </div>
-
-              <div
-                class="d-flex justify-content-between align-items-center mb-2"
-              >
-                <span
-                  class="date rounded-pill border border-light-subtle text-light p-1 px-2"
-                >
-                  01 Jan 2024
-                </span>
-                <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
-                <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
-              </div>
-            </div>
-          </div>
-          <div class="card bg-dark text-white rounded-3">
-            <div class="card-body">
-              <h5 class="card-title">Design New UI Presentation</h5>
-              <h6 class="text-light-emphasis">Marketing Course</h6>
-              <div class="mb-2">
-                <span class="text-light-emphasis">Progress</span>
-                <span class="progress-2 text-light-emphasis">7/10</span>
-              </div>
-              <div
-                class="progress mb-3"
-                role="progressbar"
-                aria-label="Basic example"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="height: 5px"
-              >
-                <div class="progress-bar" style="width: 25%"></div>
-              </div>
-
-              <div
-                class="d-flex justify-content-between align-items-center mb-2"
-              >
-                <span
-                  class="date rounded-pill border border-light-subtle text-light p-1 px-2"
-                >
-                  01 Jan 2024
-                </span>
-                <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
-                <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
-              </div>
+            <div class="ms-2 me-5">
+              <h5 class="text-primary">
+                Streak <i class="bi bi-fire text-warning"></i>
+              </h5>
+              <h1 class="text-warning mx-4">4</h1>
+              <h5 class="text-primary mx-3">Days</h5>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Script -->
+      <script src="../static/script.js"></script>
 
       <br />
       <br />
