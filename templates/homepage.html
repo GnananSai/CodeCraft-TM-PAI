@@ -430,15 +430,18 @@
         <div class="row text-light my-5 mx-0">
           <div class="col-1"></div>
           <div class="col-auto">
-            <h2>Courses Similar To Photography</h2>
-            <h6>Because you watched courses on Photography</h6>
+            <h2>Courses Similar To {{recent}}</h2>
+            <h6>Because you watched courses on {{recent}}</h6>
           </div>
         </div>
 
         <div class="row justify-content-evenly mb-5">
-          <div
+
+          {% for i in range(3) %}
+          <a
             class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
             style="width: 26rem"
+            href="{{url_for('course_page', username=username, course_name= courses[i])}}"
           >
             <div class="cardbtn btn btn-light position-absolute m-3">
               Art & Design
@@ -450,7 +453,7 @@
             />
             <div class="card-body">
               <h6 class="text-start">by Sai</h6>
-              <h3>Fine Arts and Modern Design Course</h3>
+              <h3>{{courses[i]}}</h3>
               <div class="cardbase d-flex justify-content-center">
                 <div class="clock mx-2">
                   <i class="bi bi-clock-fill"></i>
@@ -468,76 +471,9 @@
                 <span class="text-end"><u>View More</u></span>
               </p>
             </div>
-          </div>
+          </a>
 
-          <div
-            class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
-            style="width: 26rem"
-          >
-            <div class="cardbtn btn btn-light position-absolute m-3">
-              Development
-            </div>
-            <img
-              src="../static/dev.png"
-              class="card-img-top rounded-top-4"
-              alt="art"
-            />
-            <div class="card-body">
-              <h6 class="text-start">by Sai</h6>
-              <h3>Full-Stack Web Development Course</h3>
-              <div class="cardbase d-flex justify-content-center">
-                <div class="clock mx-2">
-                  <i class="bi bi-clock-fill"></i>
-                  <span>4 Weeks</span>
-                </div>
-                <div class="students mx-2">
-                  <i class="bi bi-people-fill"></i>
-                  <span>500 Students</span>
-                </div>
-              </div>
-              <hr class="text-warning" />
-              <p>
-                <s class="me-2">$49.99</s>
-                <span class="text-success fw-bolder me-2">$39.99</span>
-                <span class="text-end"><u>View More</u></span>
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
-            style="width: 26rem"
-          >
-            <div class="cardbtn btn btn-light position-absolute m-3">
-              Photography
-            </div>
-            <img
-              src="../static/photoguy.jpg"
-              class="card-img-top rounded-top-4"
-              alt="photo"
-            />
-            <div class="card-body">
-              <h6 class="text-start">by Sai</h6>
-              <h3>Pro Photography Course - For Beginners</h3>
-
-              <div class="cardbase d-flex justify-content-center">
-                <div class="clock mx-2">
-                  <i class="bi bi-clock-fill"></i>
-                  <span>2 Weeks</span>
-                </div>
-                <div class="students mx-2">
-                  <i class="bi bi-people-fill"></i>
-                  <span>89 Students</span>
-                </div>
-              </div>
-              <hr class="text-warning" />
-              <p>
-                <s class="me-2">$39.99</s>
-                <span class="text-success fw-bolder me-3">Free</span>
-                <span class="text-end"><u>View More</u></span>
-              </p>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </section>
 
