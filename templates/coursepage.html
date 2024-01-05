@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Utilities</title>
+    <title>Ultimate Course on C - by Gnana Sai</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,31 +19,26 @@
         height: 100px;
       }
 
-      .todo {
-        margin-top: 180px;
-        margin-left: 100px;
+      .course-banner {
+        margin-top: 100px;
       }
-
-      .card {
-        width: 800px;
+      .course-img {
+        width: 500px;
       }
-      .progress-2 {
-        margin-left: 660px;
+      .other-things {
+        flex-direction: row;
+        margin-left: 3rem;
+        margin-right: 3rem;
       }
-      .list-cards {
-        border-style: dashed;
-        border: orange;
+      .course-details {
+        width: 75%;
       }
-      .taskadd {
-        margin-left: 10px;
-        gap: 610px;
+      .course-img {
+        width: 25%;
       }
       @media only screen and (max-width: 600px) {
-        .progress-2 {
-          margin-left: 280px;
-        }
-        .card {
-          width: 100%;
+        .course-banner {
+          margin-top: 127px;
         }
         .navbar-custom {
           height: auto;
@@ -52,25 +47,34 @@
           position: absolute;
           margin-left: 3rem;
         }
-        .todo {
-          margin-top: 180px;
-          margin-left: auto;
+        .course-stats {
+          width: 400px;
         }
-        .taskadd {
-          margin-left: 10px;
-          gap: 230px;
+        .course-img {
+          width: fit-content;
+        }
+        .other-things {
+          flex-direction: column;
+          margin-left: 1rem;
+          margin-right: 1rem;
+        }
+        .course-details {
+          width: fit-content;
+        }
+        .course-img {
+          width: fit-content;
         }
       }
     </style>
   </head>
-  <body class="bg-black w-100">
+  <body class="bg-black">
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
 
-    <div class="container-fluid m-0 p-0">
+    <div class="p-0 m-0">
       <!-- Navbar -->
       <section class="header">
         <nav
@@ -165,7 +169,7 @@
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" type="button" href="{{url_for('focus', username=username)}}" target="_blank">
+                          <a class="dropdown-item" type="button" href="{{url_for('ucourses', username=username)}}" target="_blank">
                             Focus Session
                           </a>
                         </li>
@@ -232,160 +236,206 @@
         </nav>
       </section>
 
-      <!-- TO-DO List -->
-      <section class="todo container-fluid d-flex flex-column">
-        <div class="d-flex flex-column">
-          <span class="text-warning fs-1 fw-bold mx-1">To-Do</span>
-          <div class="taskadd d-flex">
-            <small class="text-light">To Do (4)</small>
-            <div class="text-light">
-              <span>Add new task </span>
-              <i
-                class="bi bi-plus-lg text-light border border-light rounded-circle pointer-event"
-              ></i>
+      <!-- Course Content -->
+      <section class="course-content d-flex flex-column gap-5">
+        <!-- Course Banner -->
+        <div
+          class="course-banner bg-primary d-flex flex-column justify-content-center align-items-center"
+        >
+          <div class="d-flex justify-content-center align-items-center mx-5">
+            <div class="mt-1">
+              <button class="btn btn-warning my-3">Coding</button>
+            </div>
+            <h5 class="text-white mt-2 mx-2">by Gnana Sai</h5>
+          </div>
+          <div
+            class="d-flex justify-content-center align-items-center gap-2 border-warning my-1"
+          >
+            <h1 class="text-white">The Ultimate Course On C</h1>
+          </div>
+          <div
+            class="course-stats d-flex justify-content-center align-items-center gap-3 flex-wrap bg-warning rounded-pill p-3 mb-3"
+          >
+            <div class="d-flex gap-2">
+              <i class="bi bi-clock-fill text-black"></i>
+              <span class="text-black">2 weeks</span>
+            </div>
+            <div class="d-flex gap-2">
+              <i class="bi bi-mortarboard-fill text-black"></i>
+              <span class="text-black">156 students</span>
+            </div>
+            <div class="d-flex gap-2">
+              <i class="bi bi-bar-chart-fill text-black"></i>
+              <span class="text-black">All levels</span>
+            </div>
+            <div class="d-flex gap-2">
+              <i class="bi bi-file-earmark-fill text-black"></i>
+              <span class="text-black">20 lessons</span>
+            </div>
+            <div class="d-flex gap-2">
+              <i class="bi bi-question-diamond-fill text-black"></i>
+              <span class="text-black">5 quizzes</span>
             </div>
           </div>
         </div>
-        <div class="list-cards d-flex flex-column gap-3 mx-1">
-          <div class="card bg-dark text-white rounded-3">
-            <div class="card-body">
-              <h5 class="card-title">Design New UI Presentation</h5>
-              <h6 class="text-light-emphasis">Marketing Course</h6>
-              <div class="mb-2">
-                <span class="text-light-emphasis">Progress</span>
-                <span class="progress-2 text-light-emphasis">7/10</span>
-              </div>
-              <div
-                class="progress mb-3"
-                role="progressbar"
-                aria-label="Basic example"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="height: 5px"
+        <!-- Other things -->
+        <div class="other-things d-flex gap-5">
+          <!-- Course Details -->
+          <div class="course-details">
+            <div class="p-0">
+              <ul
+                class="nav nav-tabs text-white border border-white border-bottom-0 p-0 rounded-top-3 w-100 d-flex justify-content-evenly fs-5"
+                id="myTab"
+                role="tablist"
               >
-                <div class="progress-bar" style="width: 25%"></div>
-              </div>
-
-              <div
-                class="d-flex justify-content-between align-items-center mb-2"
-              >
-                <span
-                  class="date rounded-pill border border-light-subtle text-light p-1 px-2"
+                <li
+                  class="nav-item border border-white w-25"
+                  role="presentation"
                 >
-                  01 Jan 2024
-                </span>
-                <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
-                <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
+                  <a
+                    class="nav-link active d-flex gap-2 justify-content-center"
+                    id="overview-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#overview-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="overview-tab-pane"
+                    aria-selected="true"
+                  >
+                    <i class="bi bi-eye-fill"></i>
+                    <span class="d-none d-md-block">Overview</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item border border-white w-25"
+                  role="presentation"
+                >
+                  <a
+                    class="nav-link d-flex gap-2 justify-content-center"
+                    id="curriculum-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#curriculum-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="curriculum-tab-pane"
+                    aria-selected="false"
+                  >
+                    <i class="bi bi-journal-text"></i>
+                    <span class="d-none d-md-block"> Curriculum</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item border border-white w-25"
+                  role="presentation"
+                >
+                  <a
+                    class="nav-link d-flex gap-2 justify-content-center"
+                    id="instructors-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#instructors-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="instructors-tab-pane"
+                    aria-selected="false"
+                  >
+                    <i class="bi bi-person-circle"></i>
+                    <span class="d-none d-md-block">Instructors</span>
+                  </a>
+                </li>
+                <li
+                  class="nav-item border border-white w-25"
+                  role="presentation"
+                >
+                  <a
+                    class="nav-link d-flex gap-2 justify-content-center"
+                    id="review-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#review-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="review-tab-pane"
+                    aria-selected="false"
+                  >
+                    <i class="bi bi-star-fill"></i>
+                    <span class="d-none d-md-block">Reviews</span>
+                  </a>
+                </li>
+              </ul>
+              <div
+                class="tab-content text-white border border-warning rounded-bottom"
+                id="myTabContent"
+              >
+                <div
+                  class="tab-pane fade show active"
+                  id="overview-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="overview-tab"
+                  tabindex="0"
+                >
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Quaerat doloribus inventore possimus modi quae molestiae
+                  similique quam, nesciunt, ratione amet officiis? Perspiciatis
+                  porro commodi molestiae in dolore dicta error illum.
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="curriculum-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="curriculum-tab"
+                  tabindex="0"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Repellat aperiam expedita at mollitia corrupti ad libero
+                  dignissimos dolorum deserunt ipsa nobis, pariatur itaque ut
+                  esse totam nisi eius sunt voluptatibus!
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="instructors-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="instructors-tab"
+                  tabindex="0"
+                >
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Consequuntur ipsum explicabo in fugit. Quibusdam repellat
+                  consequatur dolorum harum, perferendis cum. Sunt impedit
+                  cumque ut tempora consectetur maxime perferendis, iste natus?
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="review-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="review-tab"
+                  tabindex="0"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                  velit quod ipsa debitis, accusamus a natus ipsum unde. Quos
+                  eos pariatur maiores dolorem molestias vero eius impedit nulla
+                  necessitatibus? Explicabo?
+                </div>
               </div>
             </div>
           </div>
-          <div class="card bg-dark text-white rounded-3">
-            <div class="card-body">
-              <h5 class="card-title">Design New UI Presentation</h5>
-              <h6 class="text-light-emphasis">Marketing Course</h6>
-              <div class="mb-2">
-                <span class="text-light-emphasis">Progress</span>
-                <span class="progress-2 text-light-emphasis">7/10</span>
-              </div>
-              <div
-                class="progress mb-3"
-                role="progressbar"
-                aria-label="Basic example"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="height: 5px"
-              >
-                <div class="progress-bar" style="width: 25%"></div>
-              </div>
 
-              <div
-                class="d-flex justify-content-between align-items-center mb-2"
-              >
-                <span
-                  class="date rounded-pill border border-light-subtle text-light p-1 px-2"
-                >
-                  01 Jan 2024
-                </span>
-                <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
-                <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
-              </div>
-            </div>
-          </div>
-          <div class="card bg-dark text-white rounded-3">
+          <!-- Image  -->
+          <div class="course-img card border border-warning bg-black">
+            <img
+              class="card-img-top"
+              src="../static/StudyGroup.png"
+              alt="Study Group"
+            />
             <div class="card-body">
-              <h5 class="card-title">Design New UI Presentation</h5>
-              <h6 class="text-light-emphasis">Marketing Course</h6>
-              <div class="mb-2">
-                <span class="text-light-emphasis">Progress</span>
-                <span class="progress-2 text-light-emphasis">7/10</span>
-              </div>
-              <div
-                class="progress mb-3"
-                role="progressbar"
-                aria-label="Basic example"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="height: 5px"
-              >
-                <div class="progress-bar" style="width: 25%"></div>
-              </div>
-
-              <div
-                class="d-flex justify-content-between align-items-center mb-2"
-              >
-                <span
-                  class="date rounded-pill border border-light-subtle text-light p-1 px-2"
-                >
-                  01 Jan 2024
-                </span>
-                <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
-                <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
-              </div>
-            </div>
-          </div>
-          <div class="card bg-dark text-white rounded-3">
-            <div class="card-body">
-              <h5 class="card-title">Design New UI Presentation</h5>
-              <h6 class="text-light-emphasis">Marketing Course</h6>
-              <div class="mb-2">
-                <span class="text-light-emphasis">Progress</span>
-                <span class="progress-2 text-light-emphasis">7/10</span>
-              </div>
-              <div
-                class="progress mb-3"
-                role="progressbar"
-                aria-label="Basic example"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
-                style="height: 5px"
-              >
-                <div class="progress-bar" style="width: 25%"></div>
-              </div>
-
-              <div
-                class="d-flex justify-content-between align-items-center mb-2"
-              >
-                <span
-                  class="date rounded-pill border border-light-subtle text-light p-1 px-2"
-                >
-                  01 Jan 2024
-                </span>
-                <span> 15<i class="bi bi-chat-left-dots mx-2"></i> </span>
-                <span> 3<i class="bi bi-paperclip mx-1"></i> </span>
+              <div class="d-flex justify-content-center align-items-center p-2">
+                <button class="btn btn-outline-primary text-white my-1" href="{{url_for('enrolled', username=username, course_name=course_name)}}">
+                  ENROLL NOW
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <br />
-      <br />
-      <br />
-
+      <br /><br />
       <!-- Footer -->
       <footer class="bg-white container-fluid">
         <div class="row mx-5 p-5 fs-5">

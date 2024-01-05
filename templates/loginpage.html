@@ -16,6 +16,9 @@
     />
   </head>
   <style>
+    .alert-section{
+      margin-top: 100px;
+    }
     .navbar-custom {
       height: 100px;
     }
@@ -56,7 +59,7 @@
           class="navbar navbar-custom navbar-dark navbar-expand-lg bg-black border-bottom border-body fixed-top"
         >
           <div class="container-fluid">
-            <a class="navbar-brand mx-3" href="#">
+            <a class="navbar-brand mx-3" href="/">
               <img
                 src="../static/reign_resized.png"
                 alt="Reign"
@@ -85,11 +88,11 @@
                 class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end"
               >
                 <li class="nav-item mx-md-2 mb-2 mb-md-0">
-                  <a class="nav-link" aria-current="page" href="#">Home</a>
+                  <a class="nav-link" aria-current="page" href="/">Home</a>
                 </li>
 
                 <li class="nav-item mx-md-2 mb-2 mb-md-0">
-                  <a class="nav-link" href="#">Courses</a>
+                  <a class="nav-link" href="/courses">Courses</a>
                 </li>
 
                 <li class="nav-item mx-md-2 mb-3 mb-md-0">
@@ -122,6 +125,17 @@
         </nav>
       </section>
 
+      <!-- Alert -->
+      <section class="alert-section bg-white">
+        <!-- Alert -->
+        {% if msg %}
+        <div class="alert bg-primary-subtle text-white' fw-bold" role="alert">
+          {{msg}}!!!
+        </div>
+        {% endif %}
+
+      </section>
+
       <!-- Login/Register -->
       <section class="pages row justify-content-center">
         <!--Login-->
@@ -133,23 +147,7 @@
               <h1 class="m-4 mb-1">Login</h1>
             </div>
 
-            <!-- Alert -->
-            {% if msg %}
-            <div
-              class="alert alert-warning alert-dismissible fade show"
-              role="alert"
-            >
-              <strong>{{msg}}!!!</strong> Check the credentials
-              <button
-                type="button"
-                class="close"
-                data-dismiss="alert"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            {% endif %}
+
 
             <div class="card-body text-start py-4 text-black">
               <form action="/login" method="post" id="form">
