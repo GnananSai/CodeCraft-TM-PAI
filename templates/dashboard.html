@@ -104,7 +104,7 @@
                 style="width: 100px; height: 100px"
               />
             </a>
-
+  
             <button
               class="navbar-toggler align-items-center justify-content-center me-3"
               type="button"
@@ -116,7 +116,7 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-
+  
             <div
               class="collapse navbar-collapse container-fluid bg-black"
               id="navbarSupportedContent"
@@ -131,7 +131,7 @@
                     >Home</a
                   >
                 </li>
-
+  
                 <li class="nav-item mx-md-2 mb-2 mb-md-0">
                   <a
                     class="nav-link"
@@ -139,7 +139,7 @@
                     >Courses</a
                   >
                 </li>
-
+  
                 <li class="nav-item mx-md-2 mb-3 mb-md-0">
                   <form class="d-flex" role="search">
                     <input
@@ -156,7 +156,7 @@
                     </button>
                   </form>
                 </li>
-
+  
                 <li class="nav-item mx-md-2 mb-2 mb-md-0 d-flex">
                   <div class="profile nav-item d-md-none d-block">
                     <div class="dropdown">
@@ -167,7 +167,7 @@
                         aria-expanded="false"
                         style="width: 35px; height: 35px"
                       />
-
+  
                       <ul class="dropdown-menu">
                         <li>
                           <a
@@ -179,7 +179,7 @@
                           </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" type="button" href="">
+                          <a class="dropdown-item" type="button" href="{{url_for('mycourses', username=username)}}">
                             My Courses
                           </a>
                         </li>
@@ -206,7 +206,7 @@
                           <a
                             class="dropdown-item"
                             type="button"
-                            href="{{url_for('ucourses', username=username)}}"
+                            href="{{url_for('focus', username=username)}}"
                             target="_blank"
                           >
                             Focus Session
@@ -224,9 +224,9 @@
                       </ul>
                     </div>
                   </div>
-                  <a class="nav-link nav-name" href="#"> {{username}}</a>
+                  <a class="nav-link nav-name" href="{{url_for('dashboard', username=username)}}"> {{username}}</a>
                 </li>
-
+  
                 <li class="nav-item mx-md-2 mb-2 mb-md-0 d-md-block d-none">
                   <div class="btn-group">
                     <img
@@ -237,7 +237,7 @@
                       aria-expanded="false"
                       style="width: 35px; height: 35px"
                     />
-
+  
                     <ul class="dropdown-menu dropdown-menu-md-end">
                       <li>
                         <a
@@ -249,7 +249,7 @@
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="#">
+                        <a class="dropdown-item" type="button" href="{{url_for('mycourses', username=username)}}">
                           My Courses
                         </a>
                       </li>

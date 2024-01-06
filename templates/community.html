@@ -180,7 +180,7 @@
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" type="button" href="">
+                        <a class="dropdown-item" type="button" href="{{url_for('mycourses', username=username)}}">
                           My Courses
                         </a>
                       </li>
@@ -225,7 +225,7 @@
                     </ul>
                   </div>
                 </div>
-                <a class="nav-link nav-name" href="#"> {{username}}</a>
+                <a class="nav-link nav-name" href="{{url_for('dashboard', username=username)}}"> {{username}}</a>
               </li>
 
               <li class="nav-item mx-md-2 mb-2 mb-md-0 d-md-block d-none">
@@ -250,7 +250,7 @@
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" type="button" href="#">
+                      <a class="dropdown-item" type="button" href="{{url_for('mycourses', username=username)}}">
                         My Courses
                       </a>
                     </li>
