@@ -7,95 +7,139 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-  return render_template('landing.html')
+  try:
+    return render_template('landing.html')
+  except:
+    return render_template('error.html')
 
 @app.route("/loginpage")
 def loginpage():
-  return render_template("loginpage.html")
+  try:
+    return render_template("loginpage.html")
+  except:
+    return render_template('error.html')
 
 @app.route("/<username>")
 def home(username):
-  recent = get_user_course(username=username)
-  print(recent)
-  courses = recommend(recent)
-  return render_template('homepage.html',username = username, courses= courses, recent = recent)
+  try:
+    recent = get_user_course(username=username)
+    print(recent)
+    courses = recommend(recent)
+    return render_template('homepage.html',username = username, courses= courses, recent = recent)
+  except:
+    return render_template('error.html')
 
 @app.route("/<username>/dashboard")
 def dashboard(username):
-  return render_template('dashboard.html', username=username)
+  try:
+    return render_template('dashboard.html', username=username)
+  except:
+    return render_template('error.html')
 
 @app.route("/<username>/community")
 def community(username):
-  data=get_post()
-  return render_template('community.html', username=username, data=data)
-
+  try: 
+    data=get_post()
+    return render_template('community.html', username=username, data=data)
+  except:
+    return render_template('error.html')
+  
 @app.route("/<username>/community", methods=['post'])
 def posted(username):
-  fufu = request.form
-  post = fufu['post']
-  store_post(username=username, content=post)
-  data= get_post()
-  return render_template('community.html', username=username , msg="Posted succesfully", post = post, data= data)
+  try: 
+    fufu = request.form
+    post = fufu['post']
+    store_post(username=username, content=post)
+    data= get_post()
+    return render_template('community.html', username=username , msg="Posted succesfully", post = post, data= data)
+  except:
+    return render_template('error.html')
 
 @app.route("/<username>/focus-session")
 def focus(username):
-  return render_template('focus-session.html', username=username)
+  try: 
+    return render_template('focus-session.html', username=username)
+  except:
+    return render_template('error.html')
 
 @app.route("/login", methods=['post'])
 def login():
-  data = request.form
-  username = data['username']
-  password = data['password']
-  real = get_pass(username)
-  if(real==None):
-    error = "User Not found"
-  elif (password == real):
-    print("passwords match")
-    return redirect(url_for('home', username=username))
-  else:
-    print("passwords dont match")
-    error = "Incorrect Password"
-  return render_template('loginpage.html', msg=error)
+  try: 
+    data = request.form
+    username = data['username']
+    password = data['password']
+    real = get_pass(username)
+    if(real==None):
+      error = "User Not found"
+    elif (password == real):
+      print("passwords match")
+      return redirect(url_for('home', username=username))
+    else:
+      print("passwords dont match")
+      error = "Incorrect Password"
+      return render_template('loginpage.html', msg=error)
+  except:
+    return render_template('error.html')
 
 @app.route("/register", methods=['post'])
 def register_page():
-  data = request.form
-  email = data['email']
-  username = data['username']
-  users = load_login_info()
-  counter=False
-  for user in users:
-    if(user['username']==username):
-      counter=True
-      break
-  password = data['password']
-  confirm = data['confirm']
-  if(counter):
-    return render_template('loginpage.html', msg="User already exists")
-  if(confirm==password):
-    register(username, password, email)
-    return render_template('loginpage.html', msg="Register Succesfull")
-  else:
-    return render_template('loginpage.html', msg="Passwords do not match")
+  try:
+    data = request.form
+    email = data['email']
+    username = data['username']
+    users = load_login_info()
+    counter=False
+    for user in users:
+      if(user['username']==username):
+        counter=True
+        break
+    password = data['password']
+    confirm = data['confirm']
+    if(counter):
+      return render_template('loginpage.html', msg="User already exists")
+    if(confirm==password):
+      register(username, password, email)
+      return render_template('loginpage.html', msg="Register Succesfull")
+    else:
+      return render_template('loginpage.html', msg="Passwords do not match")
+  except:
+    return render_template('error.html')
     
 @app.route("/courses")
 def courses():
-  return render_template('courses.html')
+  try:
+    return render_template('courses.html')
+  except:
+    return render_template('error.html')
+  
 
 @app.route("/<username>/ucourses")
 def ucourses(username):
-  return render_template('courses.html', username=username)
+  try: 
+    return render_template('courses.html', username=username)
+  except:
+    return render_template('error.html')
 
 @app.route("/<username>/utilities")
 def utilities(username):
-  return render_template('utilities.html', username=username)
+  try: 
+    return render_template('utilities.html', username=username)
+  except:
+    return render_template('error.html')
 
 @app.route("/<username>/<course_name>")
 def course_page(username, course_name):
-  return render_template('coursepage.html', username = username, course_name=course_name)
+  try:
+    return render_template('coursepage.html', username = username, course_name=course_name)
+  except:
+    return render_template('error.html')
 def enrolled(username, course_name):
-  finish_course(username=username, course_name=course_name)
-  return render_template('coursepage.html',username= username, msg="Finished Successfully", course_name=course_name)
-
+  try:
+    finish_course(username=username, course_name=course_name)
+    return render_template('coursepage.html',username= username, msg="Finished Successfully", course_name=course_name)
+  except:
+    return render_template('error.html')
+  
+  
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
