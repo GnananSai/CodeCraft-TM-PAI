@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, render_template, request, flash, redirect, url_for, get_flashed_messages
-from database import load_login_info, get_pass, register, get_post, store_post, finish_course, get_user_course
+from database import load_login_info, get_pass, register, get_post, store_post, finish_course, get_user_course, store_task, get_task
 from recommend import recommend
 
 app = Flask(__name__)
@@ -23,11 +23,15 @@ def loginpage():
 def home(username):
   try:
     recent = get_user_course(username=username)
-    print(recent)
     courses = recommend(recent)
     return render_template('homepage.html',username = username, courses= courses, recent = recent)
   except:
     return render_template('error.html')
+
+@app.route("/<username>/mycourses")
+def mycourses(username):
+  return render_template('mycourses.html', username=username)
+
 
 @app.route("/<username>/dashboard")
 def dashboard(username):
@@ -120,10 +124,14 @@ def ucourses(username):
   except:
     return render_template('error.html')
 
-@app.route("/<username>/utilities")
-def utilities(username):
+@app.route("/<username>/utilities", methods= ['post'])
+def utilities(username, newtask):
   try: 
-    return render_template('utilities.html', username=username)
+    if(newtask):
+      store_task(newtask, username=username)
+    else:
+      tasks = get_task(username=username)
+      return render_template('utilities.html', username=username, tasks= tasks)
   except:
     return render_template('error.html')
 
@@ -133,6 +141,9 @@ def course_page(username, course_name):
     return render_template('coursepage.html', username = username, course_name=course_name)
   except:
     return render_template('error.html')
+
+
+@app.route("/<username>/<course_name>/confirmation")
 def enrolled(username, course_name):
   try:
     finish_course(username=username, course_name=course_name)
@@ -140,6 +151,6 @@ def enrolled(username, course_name):
   except:
     return render_template('error.html')
   
-  
+
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)

@@ -85,6 +85,19 @@ def get_user_course(username):
     except:
       return "Classical Mechanics"
     
+def store_task(task, username):
+  now=time.localtime()
+  t=time.strftime(f, now)
+  with engine.connect() as conn:
+    conn.execute(text("INSERT INTO tasks (username,task,time) VALUES (:u, :p, :e)"),dict(u=username, p=task, e=t))  
+    conn.commit()
 
-#finish_course("admin", "Circuits and Electronics")
-finish_course("admin1", "Intoduction to Control System Design")
+def get_task(username):
+  with engine.connect() as conn:
+    result = conn.execute(text("select task from tasks where username=:u order by time;"),dict(u=username))
+    result_dict = []
+    for row in result:
+      result_dict.append(row._mapping)
+  return (result_dict) 
+    
+
