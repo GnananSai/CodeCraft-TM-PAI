@@ -32,7 +32,8 @@
       #reignbegin {
         top: 250px;
         left: 70px;
-        font-size: 70px;
+        font-size: 100px;
+        font-weight: bolder;
       }
       .hero {
         margin-top: 50px;
@@ -322,7 +323,7 @@
         <div class="row text-light my-5 mx-0">
           <div class="col-1"></div>
           <div class="col-auto">
-            <h2 class="text-primary">Welcome Back {{username}} !</h2>
+            <h2 class="text-primary">WELCOME BACK {{username}} !</h2>
             <h6>Pick up right where you left</h6>
           </div>
         </div>
@@ -332,7 +333,7 @@
             class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
             style="width: 26rem"
           >
-            <div class="cardbtn btn btn-light position-absolute m-3">
+            <div class="cardbtn btn btn-primary position-absolute m-3">
               Art & Design
             </div>
             <img
@@ -357,7 +358,11 @@
               <p>
                 <s class="me-2">$29.99</s>
                 <span class="text-success fw-bolder me-3">Free</span>
-                <span class="text-end"><u>View More</u></span>
+                <a
+                  class="text-end"
+                  href="{{url_for('course_page', username=username, course_name='Fine Arts and Modern Design Course')}}"
+                  >View More</a
+                >
               </p>
             </div>
           </div>
@@ -366,7 +371,7 @@
             class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
             style="width: 26rem"
           >
-            <div class="cardbtn btn btn-light position-absolute m-3">
+            <div class="cardbtn btn btn-primary position-absolute m-3">
               Development
             </div>
             <img
@@ -391,7 +396,11 @@
               <p>
                 <s class="me-2">$49.99</s>
                 <span class="text-success fw-bolder me-2">$39.99</span>
-                <span class="text-end"><u>View More</u></span>
+                <a
+                  class="text-end"
+                  href="{{url_for('course_page', username=username, course_name='Full-Stack Web Development Course')}}"
+                  >View More</a
+                >
               </p>
             </div>
           </div>
@@ -400,7 +409,7 @@
             class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
             style="width: 26rem"
           >
-            <div class="cardbtn btn btn-light position-absolute m-3">
+            <div class="cardbtn btn btn-primary position-absolute m-3">
               Photography
             </div>
             <img
@@ -426,7 +435,11 @@
               <p>
                 <s class="me-2">$39.99</s>
                 <span class="text-success fw-bolder me-3">Free</span>
-                <span class="text-end"><u>View More</u></span>
+                <a
+                  class="text-end"
+                  href="{{url_for('course_page', username=username, course_name='Pro Photography Course - For Beginners')}}"
+                  >View More</a
+                >
               </p>
             </div>
           </div>
@@ -440,19 +453,18 @@
         <div class="row text-light my-5 mx-0">
           <div class="col-1"></div>
           <div class="col-auto">
-            <h2>Courses Similar To {{recent}}</h2>
+            <h2 class="text-primary">COURSES SIMILAR TO {{recent}}</h2>
             <h6>Because you watched courses on {{recent}}</h6>
           </div>
         </div>
 
         <div class="row justify-content-evenly mb-5">
           {% for i in range(3) %}
-          <a
+          <div
             class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
             style="width: 26rem"
-            href="{{url_for('course_page', username=username, course_name= courses[i])}}"
           >
-            <div class="cardbtn btn btn-light position-absolute m-3">
+            <div class="cardbtn btn btn-primary position-absolute m-3">
               Art & Design
             </div>
             <img
@@ -477,10 +489,14 @@
               <p>
                 <s class="me-2">$29.99</s>
                 <span class="text-success fw-bolder me-3">Free</span>
-                <span class="text-end"><u>View More</u></span>
+                <a
+                  class="text-end"
+                  href="{{url_for('course_page', username=username, course_name= courses[i])}}"
+                  >View More</a
+                >
               </p>
             </div>
-          </a>
+          </div>
 
           {% endfor %}
         </div>
@@ -493,7 +509,7 @@
         <div class="row text-light mt-5 mb-3 mx-0">
           <div class="col-1"></div>
           <div class="col-11">
-            <h2>All Categories</h2>
+            <h2 class="text-primary">ALL CATEGORIES</h2>
             <h6>Explore our popular categories</h6>
           </div>
         </div>
@@ -629,11 +645,15 @@
         <div class="row text-light my-5 mx-0">
           <div class="col-1"></div>
           <div class="col-auto">
-            <h2>Featured Courses</h2>
+            <h2 class="text-primary">FEATURED COURSES</h2>
             <h6>Explore our popular courses</h6>
           </div>
           <div class="col-auto">
-            <a href="#" class="btn btn-outline-primary">All Courses</a>
+            <a
+              href="{{url_for('ucourses', username=username)}}"
+              class="btn btn-outline-warning"
+              >All Courses</a
+            >
           </div>
         </div>
 
@@ -642,7 +662,7 @@
             class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
             style="width: 26rem"
           >
-            <div class="cardbtn btn btn-light position-absolute m-3">
+            <div class="cardbtn btn btn-primary position-absolute m-3">
               Art & Design
             </div>
             <img
@@ -667,7 +687,11 @@
               <p>
                 <s class="me-2">$29.99</s>
                 <span class="text-success fw-bolder me-3">Free</span>
-                <span class="text-end"><u>View More</u></span>
+                <a
+                  class="text-end"
+                  href="{{url_for('course_page', username=username, course_name='Fine Arts and Modern Design Course')}}"
+                  >View More</a
+                >
               </p>
             </div>
           </div>
@@ -676,7 +700,7 @@
             class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
             style="width: 26rem"
           >
-            <div class="cardbtn btn btn-light position-absolute m-3">
+            <div class="cardbtn btn btn-primary position-absolute m-3">
               Development
             </div>
             <img
@@ -701,7 +725,11 @@
               <p>
                 <s class="me-2">$49.99</s>
                 <span class="text-success fw-bolder me-2">$39.99</span>
-                <span class="text-end"><u>View More</u></span>
+                <a
+                  class="text-end"
+                  href="{{url_for('course_page', username=username, course_name='Full-Stack Web Development Course')}}"
+                  >View More</a
+                >
               </p>
             </div>
           </div>
@@ -710,7 +738,7 @@
             class="coursecard p-0 card bg-black text-white border border-warning rounded-4 align-content-center text-center position-relative"
             style="width: 26rem"
           >
-            <div class="cardbtn btn btn-light position-absolute m-3">
+            <div class="cardbtn btn btn-primary position-absolute m-3">
               Photography
             </div>
             <img
@@ -736,7 +764,11 @@
               <p>
                 <s class="me-2">$39.99</s>
                 <span class="text-success fw-bolder me-3">Free</span>
-                <span class="text-end"><u>View More</u></span>
+                <a
+                  class="text-end"
+                  href="{{url_for('course_page', username=username, course_name='Pro Photography Course - For Beginners')}}"
+                  >View More</a
+                >
               </p>
             </div>
           </div>
@@ -785,7 +817,8 @@
         <div class="container-lg">
           <div class="text-center">
             <h2 class="text-white">
-              <i class="bi bi-person-check"></i> Student Reviews
+              <i class="bi bi-person-check"></i>
+              <span class="text-primary">Student Reviews</span>
             </h2>
             <p class="lead text-white">Take a look at our users' experiences</p>
           </div>
@@ -801,26 +834,7 @@
                     <i class="bi bi-star-fill text-altdark"></i>
                     <i class="bi bi-star-fill text-altdark"></i>
                   </div>
-                  <h5 class="mb-1">Very good</h5>
-                  <p class="mb-1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis eius libero autem voluptatum doloribus nesciunt
-                    laudantium dolores, corporis modi eveniet aspernatur, vel
-                    minus, perferendis eligendi? Debitis in libero cupiditate
-                    esse!
-                  </p>
-                  <small>Review By Sai</small>
-                </div>
-
-                <div class="list-group-item py-3">
-                  <div class="pb-2">
-                    <i class="bi bi-star-fill text-altdark"></i>
-                    <i class="bi bi-star-fill text-altdark"></i>
-                    <i class="bi bi-star-fill text-altdark"></i>
-                    <i class="bi bi-star-fill text-altdark"></i>
-                    <i class="bi bi-star-fill text-altdark"></i>
-                  </div>
-                  <h5 class="mb-1">Very Good</h5>
+                  <h5 class="mb-1">Amazing</h5>
                   <p class="mb-1">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Perspiciatis eius libero autem voluptatum doloribus nesciunt
@@ -840,6 +854,25 @@
                     <i class="bi bi-star-half text-altdark"></i>
                   </div>
                   <h5 class="mb-1">Very Good</h5>
+                  <p class="mb-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis eius libero autem voluptatum doloribus nesciunt
+                    laudantium dolores, corporis modi eveniet aspernatur, vel
+                    minus, perferendis eligendi? Debitis in libero cupiditate
+                    esse!
+                  </p>
+                  <small>Review By Sai</small>
+                </div>
+
+                <div class="list-group-item py-3">
+                  <div class="pb-2">
+                    <i class="bi bi-star-fill text-altdark"></i>
+                    <i class="bi bi-star-fill text-altdark"></i>
+                    <i class="bi bi-star-fill text-altdark"></i>
+                    <i class="bi bi-star-fill text-altdark"></i>
+                    <i class="bi bi-star text-altdark"></i>
+                  </div>
+                  <h5 class="mb-1">Good</h5>
                   <p class="mb-1">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Perspiciatis eius libero autem voluptatum doloribus nesciunt
